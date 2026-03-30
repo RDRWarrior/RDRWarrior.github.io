@@ -1,101 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matthew Grady | Game Engineer</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Matthew Grady | Game Engineer</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #0f1117;
-    color: #e6e6e6;
-    margin: 0;
-}
+    <body>
+        <nav>
+            <div><a href="index.html">Matthew Grady</a></div>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="programs.html">Programs</a>
+                <a href="about.html">About</a>
+            </div>
+        </nav>
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background: #111;
-}
+        <section class="hero">
+            <h1>Game Engineer | Gameplay Systems</h1>
+            <p>I build gameplay systems, interactive prototypes, and tools using Unity, C++, and cross-platform technologies.</p>
+            <a class="button" href="games.html">View Games</a>
+        </section>
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
+        <section class="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="card">
+                    <img src="assets/images/kcapture.png" class="card-img">
+                    <h3>Kandra Capture</h3>
+                    <p>Unity social deduction prototype focused on disguise, evidence, and player tracking systems.</p>
+                    <div class="tags">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>Gameplay</span>
+                    </div>
+                    <a href="games/kcapture.html" class="button">View Game</a>
+                </div>
 
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
+                <div class="card">
+                    <img src="assets/images/mygame.png" class="card-img">
+                    <h3>Push-Pull</h3>
+                    <p>C++ gameplay systems project focused on mechanics, interaction, and framework-level architecture.</p>
+                    <div class="tags">
+                        <span>C++</span>
+                        <span>Gameplay</span>
+                        <span>Systems</span>
+                    </div>
+                    <a href="games/pushpull.html" class="button">View Game</a>
+                </div>
 
-.button {
-    background: #4e8cff;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-.projects {
-    padding: 60px;
-    text-align: center;
-}
-
-.card {
-    background: #1a1d25;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    width: 250px;
-}
-</style>
-
-</head>
-
-<body>
-
-<nav>
-<div>Matthew Grady</div>
-<div>
-<a href="#">Projects</a>
-<a href="#">Resume</a>
-<a href="#">About</a>
-</div>
-</nav>
-
-<section class="hero">
-<h1>Game Engineer | Gameplay Systems</h1>
-
-<p>
-I build gameplay systems, interactive prototypes, and tools using Unity, C++, and cross-platform technologies.
-</p>
-
-<a class="button" href="#">View Projects</a>
-</section>
-
-<section class="projects">
-<h2>Featured Projects</h2>
-
-<div class="card">
-<h3>KCapture</h3>
-<p>Unity social deduction prototype.</p>
-</div>
-
-<div class="card">
-<h3>MyGame</h3>
-<p>C++ gameplay systems project.</p>
-</div>
-
-<div class="card">
-<h3>Nexus App</h3>
-<p>Offline-first convention planner.</p>
-</div>
-
-</section>
-
-</body>
+                <div class="card">
+                    <img src="assets/images/nexus.png" class="card-img">
+                    <h3>Nexus App</h3>
+                    <p>Offline-first convention planner built to help users browse events and manage personal schedules.</p>
+                    <div class="tags">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>UI/UX</span>
+                    </div>
+                    <a href="programs/nexus.html" class="button">View Program</a>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>
+
