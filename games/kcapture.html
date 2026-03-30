@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KCapture | Matthew Grady</title>
+    <title>Kandra Capture | Matthew Grady</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
@@ -20,50 +20,76 @@
 
     <section class="hero">
         <h1>Kandra Capture</h1>
-        <p>Unity asymmetric social deduction prototype focused on disguise, evidence, and player tracking systems.</p>
+        <p>
+            A systems-focused prototype for <strong>Cosmere Hunt</strong>, an asymmetric multiplayer social deduction game built around disguise, observation, and evidence-driven investigation.
+        </p>
     </section>
 
     <section class="projects">
-        <div class="card" style="max-width: 900px; margin: 0 auto; text-align: left;">
+        <img src="../assets/images/kcapture.png" class="card-img" style="max-width: 900px; display: block; margin: 20px auto;" alt="Kandra Capture project image">
 
+        <div class="card" style="max-width: 900px; margin: 0 auto 24px auto;">
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; text-align: left;">
+                <div><strong>Engine:</strong> Unity</div>
+                <div><strong>Language:</strong> C#</div>
+                <div><strong>Genre:</strong> Asymmetric Social Deduction</div>
+                <div><strong>Mode:</strong> Singleplayer Prototype → Multiplayer Planned</div>
+            </div>
+        </div>
+
+        <div class="card" style="max-width: 900px; margin: 0 auto 24px auto; text-align: left;">
             <h2>Overview</h2>
             <p>
-                KCapture is a Unity-based asymmetric social deduction prototype where players blend into NPC crowds
-                while hunters attempt to identify and capture them using evidence, abilities, and environmental cues.
+                Kandra Capture is the current playable prototype mode of <strong>Cosmere Hunt</strong>, an asymmetric multiplayer stealth and social deduction game set in a Mistborn-inspired environment. Players take on the roles of Kandra infiltrators or Steel Inquisitor hunters, competing through deception, observation, and deduction rather than straightforward combat.
             </p>
 
             <h2>My Role</h2>
             <p>
-                Designed and implemented gameplay systems, interaction mechanics, UI flow, and core game loop logic.
+                I designed and implemented the prototype’s core gameplay systems, match flow, interaction structure, and scenario framework. The project was built to validate whether crowd deception, evidence generation, and player-driven deduction could support a full multiplayer experience.
             </p>
 
-            <h2>Core Systems</h2>
+            <h2>Core Gameplay Loop</h2>
+            <p>
+                Kandra players blend into the NPC population, move between task locations, complete objectives, and change disguises when necessary. Inquisitors patrol the environment, observe suspicious behavior, investigate physical evidence, and use combat tools to identify and eliminate hidden players.
+            </p>
+
+            <h2>Key Systems</h2>
             <ul>
-                <li>Task and interaction systems for player objectives</li>
-                <li>Disguise and identity blending mechanics</li>
-                <li>Evidence and detection systems for hunters</li>
-                <li>Match flow and win condition logic</li>
-                <li>UI prompts and interaction feedback</li>
+                <li><strong>Task System:</strong> Kandra complete distributed objectives across the level rather than staying in a single safe area.</li>
+                <li><strong>Disguise System:</strong> Kandra consume corpses left by Inquisitors in order to assume new identities.</li>
+                <li><strong>Evidence & Forensics:</strong> Disguise changes leave behind bones from the previous form, creating delayed investigative clues.</li>
+                <li><strong>Blessing System:</strong> Kandra can gain powers such as Awareness, Potency, Presence, and Stability that alter survivability, information, and task speed.</li>
+                <li><strong>Hunter Tools:</strong> Inquisitors use coin stuns, knives, reveal pulses, and forensic investigation to track and eliminate infiltrators.</li>
+                <li><strong>Match Systems:</strong> Global task tracking, timer control, life tracking, and victory-state logic determine the outcome of each match.</li>
             </ul>
 
             <h2>Technical Focus</h2>
             <p>
-                Focused on modular gameplay systems, readable interactions, and rapid iteration within Unity.
-                Systems were designed to be extendable for future multiplayer integration.
+                The prototype is systems-first. My focus was on building readable gameplay interactions and modular scenario logic rather than final polish. The project currently validates asymmetric roles, tasks, disguise and replacement, evidence generation, blessings, combat tools, and win conditions in a playable prototype state.
             </p>
 
-            <h2>Challenges</h2>
+            <h2>Design Challenges</h2>
             <p>
-                One of the main challenges was balancing readability and deception—ensuring players could blend in
-                convincingly while still providing enough feedback for hunters to track behavior patterns.
+                The core challenge was balancing deception with readability. Kandra need enough freedom to blend naturally into NPC behavior, but Inquisitors still need enough information to make meaningful deductions. The design solves this by relying on behavior, environmental context, and physical evidence rather than automatic player reveals.
+            </p>
+
+            <h2>Level & Scenario Design</h2>
+            <p>
+                The current scenario takes place at the Noble Ball, inside a keep with spaces such as the ballroom, kitchen, dining areas, religious chamber, and prisoner holding area. Different rooms support different play conditions: crowded spaces favor blending, while quieter and more enclosed spaces increase suspicion and make evidence discovery more meaningful.
             </p>
 
             <h2>Current State</h2>
             <p>
-                The project is currently in an advanced prototype stage with core gameplay systems implemented
-                and undergoing visual polish and system refinement.
+                Kandra Capture is currently playable in singleplayer prototype form and is intended to move toward LAN multiplayer first, followed by online multiplayer. The prototype is already mechanically complete enough to validate the core systems and the central stealth-investigation loop.
             </p>
+        </div>
 
+        <div class="card" style="max-width: 900px; margin: 0 auto; text-align: left;">
+            <h2>Prototype Environment / Level Blockout</h2>
+            <img src="../assets/images/kcapture_layout.png" class="card-img" alt="Kandra Capture ballroom and stairwell blockout">
+            <p>
+                Early blockout work for the Noble Ball environment, showing the spatial relationship between major play areas such as the ballroom and adjacent circulation spaces. This layout work was important for crowd density, sightlines, and how suspicion changes between open and enclosed areas.
+            </p>
         </div>
     </section>
 </body>
