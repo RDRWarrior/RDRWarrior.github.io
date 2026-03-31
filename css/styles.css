@@ -469,13 +469,6 @@ main {
     margin-bottom: 24px;
 }
 
-.about-links-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
-    margin-top: 24px;
-}
-
 .about-top-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -640,23 +633,6 @@ main {
 
 .card-link:hover .card-arrow {
     transform: translateX(4px);
-}
-
-/* TAGS */
-.tags {
-    margin-top: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.tags span {
-    background: rgba(255, 255, 255, 0.05);
-    color: #e8edf8;
-    padding: 6px 10px;
-    border-radius: 999px;
-    font-size: 0.74rem;
-    border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 /* ABOUT */
