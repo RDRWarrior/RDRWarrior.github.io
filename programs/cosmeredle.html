@@ -20,49 +20,61 @@
 
     <section class="hero">
         <h1>Cosmeredle Solver</h1>
-        <p>Interactive filtering tool designed to assist with solving character-based deduction puzzles.</p>
+        <p>
+            A client-side deduction tool designed to narrow Cosmere character candidates through structured data filtering, live UI updates, and multi-constraint search.
+        </p>
     </section>
 
     <section class="projects">
-        <div class="card" style="max-width: 900px; margin: 0 auto; text-align: left;">
+        <img src="../assets/images/cosmeredle.png" class="project-image" alt="Cosmeredle Solver interface">
 
+        <div class="card" style="max-width: 900px; margin: 0 auto 24px auto;">
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; text-align: left;">
+                <div><strong>Stack:</strong> Vanilla JavaScript</div>
+                <div><strong>Data Source:</strong> JSON</div>
+                <div><strong>Type:</strong> Web Tool</div>
+                <div><strong>Focus:</strong> Constraint-Based Filtering</div>
+            </div>
+        </div>
+
+        <div class="card" style="max-width: 900px; margin: 0 auto 24px auto; text-align: left;">
             <h2>Overview</h2>
             <p>
-                Cosmeredle Solver is a web-based tool built to help players narrow down possible answers
-                in a character-based puzzle game by applying filters and constraints dynamically.
+                Cosmeredle Solver is a browser-based deduction tool built to help users narrow down possible Cosmere character candidates in a puzzle-style format. Instead of manually tracking possibilities, the tool lets users apply multiple constraints at once and immediately see the filtered candidate pool update in real time.
             </p>
 
             <h2>My Role</h2>
             <p>
-                Designed and implemented the filtering system, UI interaction flow, and data handling logic.
+                I designed and implemented the filtering logic, interface structure, and state flow for the tool. The goal was to create a fast, readable system that could handle many simultaneous constraints without becoming difficult to use.
             </p>
 
             <h2>Core Features</h2>
             <ul>
-                <li>Dynamic filtering based on multiple character attributes</li>
-                <li>Real-time updating of possible results</li>
-                <li>Interactive UI with selectable constraints</li>
-                <li>Structured data handling for character datasets</li>
+                <li><strong>Live Multi-Constraint Filtering:</strong> Characters can be narrowed by world, first appearance, species base, subtype, and abilities.</li>
+                <li><strong>Positive and Negative Rules:</strong> Users can define both what a candidate must have and what they must not have.</li>
+                <li><strong>Dynamic Control Population:</strong> Filter controls are populated directly from the dataset rather than hard-coded.</li>
+                <li><strong>Dependent Filter Updating:</strong> Available options shrink as candidates are removed, keeping the UI aligned with valid possibilities.</li>
+                <li><strong>Searchable Filter Lists:</strong> Large checkbox groups remain usable through built-in search inputs.</li>
+                <li><strong>Selected Candidate Details:</strong> Clicking a result shows a structured detail panel for the selected character.</li>
             </ul>
 
             <h2>Technical Focus</h2>
             <p>
-                Focused on front-end logic, efficient filtering algorithms, and responsive UI updates
-                using JavaScript and structured data models.
+                The project centers on client-side data handling and UI-driven state updates. Character data is loaded from JSON, controls are generated from the dataset, and the filtering pipeline applies a sequence of inclusion, exclusion, and relational rules to produce the remaining candidate list.
             </p>
-
-            <h2>Challenges</h2>
             <p>
-                A key challenge was designing a flexible filtering system that could handle multiple
-                simultaneous constraints while remaining fast and easy to use.
+                A key technical focus was maintaining consistency between the result set and the available controls. As filters change, dependent controls update to reflect only possible remaining values while preserving any active selections already chosen by the user.
             </p>
 
-            <h2>Current State</h2>
+            <h2>Design Challenges</h2>
             <p>
-                The tool is functional and demonstrates real-time filtering and UI interaction,
-                with potential for expansion into a more generalized puzzle-solving framework.
+                The main challenge was balancing complexity and readability. The solver needed to support many overlapping filters while still making it clear why the candidate count was changing. This required careful handling of active filter visibility, reset behavior, search within filter groups, and selected-character feedback.
             </p>
 
+            <h2>Development Status</h2>
+            <p>
+                Cosmeredle Solver is a completed utility-style project that demonstrates structured front-end logic, interactive filtering systems, and a focused data-driven interface for solving a niche but complex problem.
+            </p>
         </div>
     </section>
 </body>
