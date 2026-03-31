@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Pane No Game | Matthew Grady</title>
+    <title>Mellow Yellow Fellow | Matthew Grady</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
+    <div class="bg-stars"></div>
+    <div class="bg-cosmere"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
     <nav>
-        <div><a href="../index.html">Matthew Grady</a></div>
-        <div>
+        <div class="nav-brand">
+            <a href="../index.html">Matthew Grady</a>
+        </div>
+        <div class="nav-links">
             <a href="../index.html">Home</a>
             <a href="../games.html">Games</a>
             <a href="../programs.html">Programs</a>
@@ -17,25 +26,114 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <h1>No Pane No Game</h1>
-        <p>Game project centered on mechanics, play flow, and interactive design.</p>
-    </section>
+    <main>
+        <section class="hero hero-small">
+            <div class="hero-inner">
+                <div class="hero-emblem" aria-hidden="true">
+                    <div class="hero-ring hero-ring-1"></div>
+                    <div class="hero-ring hero-ring-2"></div>
+                    <div class="hero-ring hero-ring-3"></div>
+                    <div class="hero-core"></div>
+                    <div class="hero-dot hero-dot-1"></div>
+                    <div class="hero-dot hero-dot-2"></div>
+                    <div class="hero-dot hero-dot-3"></div>
+                    <div class="hero-dot hero-dot-4"></div>
+                </div>
 
-    <section class="projects">
-        <div class="card" style="max-width: 900px; margin: 0 auto; text-align: left;">
-            <h2>Overview</h2>
-            <p>No Pane No Game is a game project built around mechanic-driven interaction and player-facing play flow.</p>
+                <div class="hero-kicker">Unity • AI • UI • Arcade Sequel Prototype</div>
+                <h1>Mellow Yellow Fellow</h1>
+                <p>
+                    A Unity sequel prototype inspired by Pac-Man, focused on ghost behavior, teleport tunnels, score systems, level reset flow, and readable arcade gameplay.
+                </p>
+            </div>
+        </section>
 
-            <h2>My Role</h2>
-            <p>Worked on gameplay implementation, interaction structure, and project iteration.</p>
+        <section class="projects section-shell project-page">
+            <img src="../assets/images/mygame.png" class="project-image project-hero-image" alt="Mellow Yellow Fellow gameplay image">
 
-            <h2>Technical Focus</h2>
-            <p>Focused on implementing gameplay features, refining responsiveness, and shaping overall play feel.</p>
+            <div class="card project-meta-card">
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Engine</span>
+                        <span class="meta-value">Unity</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Project Type</span>
+                        <span class="meta-value">Game Engineering Prototype</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">Arcade Systems, AI, UI</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Design &amp; Implementation</span>
+                    </div>
+                </div>
+            </div>
 
-            <h2>Current State</h2>
-            <p>The project demonstrates practical gameplay implementation and design iteration.</p>
-        </div>
-    </section>
+            <div class="card project-content-card">
+                <h2>Overview</h2>
+                <p>
+                    Mellow Yellow Fellow is a Unity prototype developed as a sequel-style extension of a provided baseline arcade game. The project reworks a Pac-Man-inspired structure into a more complete playable experience by adding tunnel teleportation, ghost recovery behavior, life-based resets, level progression, user interface systems, and persistent high-score handling. :contentReference[oaicite:1]{index=1}
+                </p>
+
+                <h2>My Role</h2>
+                <p>
+                    I designed and implemented the new gameplay systems and project improvements on top of the provided Unity prototype. My work focused on ghost logic, player state flow, UI visibility, level resetting, score persistence, and general refinement of the game’s arcade loop. :contentReference[oaicite:2]{index=2}
+                </p>
+
+                <h2>Core Features</h2>
+                <ul class="project-list">
+                    <li><strong>Tunnel Teleportation:</strong> The Fellow and ghosts can move through side tunnels to travel from one side of the maze to the other.</li>
+                    <li><strong>Ghost Recovery:</strong> When ghosts are eaten during a power-up state, they return to their home area before rejoining the game.</li>
+                    <li><strong>Lives System:</strong> The player has multiple lives, with the Fellow and ghosts resetting to their starting positions after being caught.</li>
+                    <li><strong>Level Reset & Progression:</strong> Clearing all pellets resets the board and starts a new level while preserving the arcade-style score loop.</li>
+                    <li><strong>User Interface:</strong> The game displays current score, high score, level, and life count during play.</li>
+                    <li><strong>Saved High Scores:</strong> Scores are written to file and reloaded later for persistent comparison across sessions.</li>
+                </ul>
+
+                <h2>Ghost AI & Behaviour</h2>
+                <p>
+                    The ghost system was one of the most important parts of the project. Ghosts already used line-of-sight logic through raycasting to detect and chase the Fellow when sight was not obstructed. I expanded that behavior by supporting frightened/eaten state logic and a return-to-home “rebirth” flow after being consumed during a power-up. I also experimented with visual state changes by making eaten ghosts effectively invisible through a repurposed transparent material. :contentReference[oaicite:3]{index=3}
+                </p>
+                <p>
+                    One limitation noted in the report is that I did not implement distinct personalities for multiple ghosts, even though that would have been a natural extension of the design. The ghosts instead shared the same broad behavior structure. :contentReference[oaicite:4]{index=4}
+                </p>
+
+                <h2>Player Progression & Game Flow</h2>
+                <p>
+                    A major part of the project was making the game feel closer to a classic arcade loop. If the Fellow touches a ghost without an active power-up, the board state resets for character positions and the player loses a life, while consumed pellets and power-ups remain gone unless the level is reset. If all pellets are cleared, the level refreshes and the game continues into the next round rather than ending permanently, preserving the score-chasing structure associated with Pac-Man-style design. :contentReference[oaicite:5]{index=5}
+                </p>
+
+                <h2>User Interface & Score Systems</h2>
+                <p>
+                    I implemented visible UI support so the player can always track score, remaining lives, level, and high-score progress. The project also includes a saved scoreboard system backed by a text file, with a default player identity and score replacement logic when a new high score is achieved. The scoreboard can be displayed during the game by pressing Enter, and the entries are sorted in descending score order. :contentReference[oaicite:6]{index=6}
+                </p>
+
+                <h2>Technical Focus</h2>
+                <p>
+                    The project is a good example of extending a provided Unity baseline into a more complete game loop through prefab use, state-driven logic, file-backed persistence, and AI adjustment. It also reflects early Unity-focused development work: using prefabs for pellets, power-ups, and ghost setup; handling event-driven collisions; and integrating player-visible systems without rebuilding the entire project architecture. :contentReference[oaicite:7]{index=7}
+                </p>
+
+                <h2>Design Challenges</h2>
+                <p>
+                    The main challenge was turning a tutorial-style prototype into a fuller game loop without destabilizing the existing project. The report specifically notes issues such as unpredictable ghost teleportation, incomplete audio work, the game beginning before the intended start interaction, and the scoreboard only fully updating after reload. These issues are useful evidence of the kinds of debugging and system-linking problems that appear early in Unity project development. :contentReference[oaicite:8]{index=8}
+                </p>
+
+                <h2>Outcome</h2>
+                <p>
+                    Mellow Yellow Fellow demonstrates a practical Unity prototype built around recognizable arcade principles: chase AI, power-up state changes, level reset flow, persistent scores, and player-visible feedback. It works well as an early systems project because it shows both successful feature integration and honest reflection on implementation limits and debugging challenges. :contentReference[oaicite:9]{index=9}
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by Matthew Grady</p>
+    </footer>
+
+    <div class="page-transition"></div>
+    <script src="../js/transitions.js"></script>
 </body>
 </html>

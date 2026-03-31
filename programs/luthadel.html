@@ -6,10 +6,19 @@
     <title>Luthadel Rendering Study | Matthew Grady</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
+    <div class="bg-stars"></div>
+    <div class="bg-cosmere"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
     <nav>
-        <div><a href="../index.html">Matthew Grady</a></div>
-        <div>
+        <div class="nav-brand">
+            <a href="../index.html">Matthew Grady</a>
+        </div>
+        <div class="nav-links">
             <a href="../index.html">Home</a>
             <a href="../games.html">Games</a>
             <a href="../programs.html">Programs</a>
@@ -17,25 +26,89 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <h1>Luthadel Rendering Study</h1>
-        <p>Rendering-focused technical project exploring scene presentation, environment work, and visual structure.</p>
-    </section>
+    <main>
+        <section class="hero hero-small">
+            <div class="hero-inner">
+                <div class="hero-emblem" aria-hidden="true">
+                    <div class="hero-ring hero-ring-1"></div>
+                    <div class="hero-ring hero-ring-2"></div>
+                    <div class="hero-ring hero-ring-3"></div>
+                    <div class="hero-core"></div>
+                    <div class="hero-dot hero-dot-1"></div>
+                    <div class="hero-dot hero-dot-2"></div>
+                    <div class="hero-dot hero-dot-3"></div>
+                    <div class="hero-dot hero-dot-4"></div>
+                </div>
 
-    <section class="projects">
-        <div class="card" style="max-width: 900px; margin: 0 auto; text-align: left;">
-            <h2>Overview</h2>
-            <p>Luthadel Rendering Study is a rendering and environment-focused project centered on visual presentation and technical scene work.</p>
+                <div class="hero-kicker">Rendering • Environment Study • Visual Structure</div>
+                <h1>Luthadel Rendering Study</h1>
+                <p>
+                    A rendering-focused technical study exploring scene presentation, environment composition, and visual structure.
+                </p>
+            </div>
+        </section>
 
-            <h2>My Role</h2>
-            <p>Worked on rendering, environment setup, and technical visual presentation.</p>
+        <section class="projects section-shell project-page">
+            <img src="../assets/images/kcapture.png" class="project-image project-hero-image" alt="Luthadel rendering image">
 
-            <h2>Technical Focus</h2>
-            <p>Focused on scene rendering, visual structure, and environment-related technical implementation.</p>
+            <div class="card project-meta-card">
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Type</span>
+                        <span class="meta-value">Technical Study</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">Rendering &amp; Presentation</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Environment Visualization</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Technical Exploration</span>
+                    </div>
+                </div>
+            </div>
 
-            <h2>Current State</h2>
-            <p>The project functions as a technical visualization and rendering showcase piece.</p>
-        </div>
-    </section>
+            <div class="card project-content-card">
+                <h2>Overview</h2>
+                <p>
+                    Luthadel Rendering Study is a technical exploration centered on scene presentation, environment composition, and the rendering decisions that shape how an environment is read. The project focuses on the visual side of technical implementation rather than pure gameplay systems.
+                </p>
+
+                <h2>My Role</h2>
+                <p>
+                    I developed the study as a rendering and environment-focused exploration, evaluating how presentation choices affect atmosphere, readability, and scene cohesion.
+                </p>
+
+                <h2>Core Focus</h2>
+                <ul class="project-list">
+                    <li><strong>Scene Presentation:</strong> The project explores how an environment is framed and visually communicated.</li>
+                    <li><strong>Environment Composition:</strong> Attention is placed on the structure and readability of the scene.</li>
+                    <li><strong>Rendering Decisions:</strong> The study examines how technical visual choices shape mood and clarity.</li>
+                    <li><strong>Visualization:</strong> The work serves as a focused technical-art-style investigation into environment display.</li>
+                </ul>
+
+                <h2>Design Challenges</h2>
+                <p>
+                    Environment rendering work requires balancing atmosphere and readability. A scene can become visually rich but unclear, or highly legible but flat. The challenge here was exploring presentation techniques that support both visual identity and structural clarity.
+                </p>
+
+                <h2>Development Value</h2>
+                <p>
+                    This study helped deepen my understanding of rendering-focused presentation, environment composition, and how technical decisions shape player-facing visual experience.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by Matthew Grady</p>
+    </footer>
+
+    <div class="page-transition"></div>
+    <script src="../js/transitions.js"></script>
 </body>
 </html>

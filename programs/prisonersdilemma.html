@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prisoner’s Dilemma Simulator | Matthew Grady</title>
+    <title>Luthadel / Elendel Rendering Transition | Matthew Grady</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
+    <div class="bg-stars"></div>
+    <div class="bg-cosmere"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
     <nav>
-        <div><a href="../index.html">Matthew Grady</a></div>
-        <div>
+        <div class="nav-brand">
+            <a href="../index.html">Matthew Grady</a>
+        </div>
+        <div class="nav-links">
             <a href="../index.html">Home</a>
             <a href="../games.html">Games</a>
             <a href="../programs.html">Programs</a>
@@ -17,25 +26,131 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <h1>Prisoner’s Dilemma Simulator</h1>
-        <p>Interactive program for testing strategy behavior and comparing outcomes in repeated Prisoner’s Dilemma scenarios.</p>
-    </section>
+    <main>
+        <section class="hero hero-small">
+            <div class="hero-inner">
+                <div class="hero-emblem" aria-hidden="true">
+                    <div class="hero-ring hero-ring-1"></div>
+                    <div class="hero-ring hero-ring-2"></div>
+                    <div class="hero-ring hero-ring-3"></div>
+                    <div class="hero-core"></div>
+                    <div class="hero-dot hero-dot-1"></div>
+                    <div class="hero-dot hero-dot-2"></div>
+                    <div class="hero-dot hero-dot-3"></div>
+                    <div class="hero-dot hero-dot-4"></div>
+                </div>
 
-    <section class="projects">
-        <div class="card" style="max-width: 900px; margin: 0 auto; text-align: left;">
-            <h2>Overview</h2>
-            <p>This simulator allows users to select and compare Prisoner’s Dilemma strategies to see how they perform across repeated interactions.</p>
+                <div class="hero-kicker">C++ • OpenGL • Rendering • Scene Transition</div>
+                <h1>Luthadel / Elendel Rendering Transition</h1>
+                <p>
+                    An Advanced Graphics project that transforms Kredik Shaw’s ash-covered Luthadel into Elendel’s Field of Rebirth through a time-driven visual transition built with custom OpenGL rendering systems.
+                </p>
 
-            <h2>My Role</h2>
-            <p>Implemented the strategy logic, comparison structure, and user-facing interaction flow.</p>
+                <div class="hero-actions">
+                    <a href="https://youtu.be/2sNb_CNIxPY" target="_blank" class="button">Watch Video</a>
+                </div>
+            </div>
+        </section>
 
-            <h2>Technical Focus</h2>
-            <p>Focused on simulation logic, outcome comparison, and structured program behavior.</p>
+        <section class="projects section-shell project-page">
+            <img src="../assets/images/kcapture.png" class="project-image project-hero-image" alt="Luthadel to Elendel rendering project image">
 
-            <h2>Current State</h2>
-            <p>The project demonstrates applied programming and simulation-oriented logic rather than game design.</p>
-        </div>
-    </section>
+            <div class="card project-meta-card">
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Language</span>
+                        <span class="meta-value">C++</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Graphics Stack</span>
+                        <span class="meta-value">OpenGL 3.3, GLFW, GLEW</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">Rendering, Transition Effects, Scene Systems</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Project Type</span>
+                        <span class="meta-value">Advanced Graphics Transition Project</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card project-content-card">
+                <h2>Overview</h2>
+                <p>
+                    This project was built as an Advanced Graphics transition piece inspired by Mistborn. The core idea was to show the destruction of Kredik Shaw and the transformation of Luthadel into Elendel’s Field of Rebirth. The final sequence is not just a static scene swap, but a timed visual narrative in which architecture collapses, ash and mist effects reshape the atmosphere, and the environment transitions from an oppressive red-lit world into a brighter memorial landscape. :contentReference[oaicite:2]{index=2}
+                </p>
+
+                <h2>My Role</h2>
+                <p>
+                    I designed and implemented the full transition experience, including the rendering pipeline, procedural scene construction, environmental effects, camera systems, and the sequential logic controlling the transformation from one era to the next.
+                </p>
+
+                <h2>Scene Structure</h2>
+                <p>
+                    The project is built around two primary scene states. The first presents Luthadel under a red sun with drifting ash and Kredik Shaw dominating the skyline. The second shows Elendel’s Field of Rebirth, including a central memorial statue, ring-based park layout, and cleaner daylight atmosphere. The transition between them is time-driven and sequential rather than instantaneous. :contentReference[oaicite:3]{index=3}
+                </p>
+
+                <h2>Core Rendering Features</h2>
+                <ul class="project-list">
+                    <li><strong>Custom Shader Pipeline:</strong> The project uses a custom OpenGL shader pipeline and scene graph system for rendering control and object organization.</li>
+                    <li><strong>Directional Lighting:</strong> Scene lighting includes ambient, diffuse, and specular components, with the sun color interpolating across the transition.</li>
+                    <li><strong>Environment Mapping:</strong> Dual cubemap skyboxes support distinct Luthadel and Elendel atmospheres.</li>
+                    <li><strong>Automatic Camera Track:</strong> A predefined camera spline path presents the scene cinematically until free camera mode is toggled.</li>
+                    <li><strong>Scene Graph Management:</strong> Scene nodes are added and removed in sequence as the transition progresses. :contentReference[oaicite:4]{index=4}
+                    </li>
+                </ul>
+
+                <h2>Advanced Technical Features</h2>
+                <ul class="project-list">
+                    <li><strong>Real-Time Shadow Mapping:</strong> A dynamic shadow pass updates as collapsing and transforming geometry changes the scene. :contentReference[oaicite:5]{index=5}</li>
+                    <li><strong>Post-Processing:</strong> A custom framebuffer and transition shader handle full-screen blending and era-shift effects. :contentReference[oaicite:6]{index=6}</li>
+                    <li><strong>Particle Systems:</strong> The project includes both falling ash and a mist-wave system used during the transformation. :contentReference[oaicite:7]{index=7}</li>
+                    <li><strong>Procedural Geometry:</strong> Kredik Shaw, walls, park rings, canals, and other scene structures are created from simple primitives and runtime mesh generation. </li>
+                    <li><strong>Dynamic Lighting & Sky Blending:</strong> The project transitions smoothly from Luthadel’s red haze to Elendel’s clear daylight through lighting and skybox interpolation. </li>
+                    <li><strong>Camera Shake:</strong> Sinusoidal camera offsets are used during the collapse phase to create physical weight during destruction. </li>
+                </ul>
+
+                <h2>Material & Atmospheric Work</h2>
+                <p>
+                    One of the strongest visual details in the project is the treatment of Kredik Shaw’s stained-glass windows. These use emissive materials combined with colored diffuse maps and low-frequency sine-based modulation to mimic flickering internal firelight. The project also uses alpha-blended ash particles drifting across the scene, fading out during the transition to symbolize the cleansing of the sky as the world changes from Luthadel to Elendel. :contentReference[oaicite:11]{index=11}
+                </p>
+
+                <h2>Performance & Structure</h2>
+                <p>
+                    According to the project features sheet, the system was built to run smoothly at roughly 60 FPS in fullscreen while supporting multiple advanced rendering techniques at once. That combination of visual ambition and maintained runtime performance was an important technical goal of the project. :contentReference[oaicite:12]{index=12}
+                </p>
+
+                <h2>Controls</h2>
+                <ul class="project-list">
+                    <li><strong>Space:</strong> Begin transition from Luthadel to Elendel</li>
+                    <li><strong>R:</strong> Reset to Luthadel</li>
+                    <li><strong>F:</strong> Toggle free camera</li>
+                    <li><strong>WASD:</strong> Move in free camera</li>
+                    <li><strong>F11:</strong> Toggle fullscreen</li>
+                </ul>
+
+                <h2>Outcome</h2>
+                <p>
+                    This project is one of the clearest examples in my portfolio of combining technical graphics programming with thematic scene direction. It shows how rendering systems, particle effects, timing logic, shader work, and procedural construction can be orchestrated to support not just a pretty scene, but a visual transformation with narrative weight. 
+                </p>
+            </div>
+
+            <div class="card project-showcase-card">
+                <h2>Transition Highlights</h2>
+                <p>
+                    The report’s figure sequence shows the project’s key stages: the initial Luthadel scene under the red sun, the collapse of Kredik Shaw during the transition, the walls crumbling as the mist wave sweeps through, and the final Field of Rebirth layout with circular pathways and memorial statue. The technical detail pages also show stained-glass firelight and the ash-filled sky presentation. :contentReference[oaicite:14]{index=14}
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by Matthew Grady</p>
+    </footer>
+
+    <div class="page-transition"></div>
+    <script src="../js/transitions.js"></script>
 </body>
 </html>

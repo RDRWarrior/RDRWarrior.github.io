@@ -6,10 +6,19 @@
     <title>Nature Quest App | Matthew Grady</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
+    <div class="bg-stars"></div>
+    <div class="bg-cosmere"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
     <nav>
-        <div><a href="../index.html">Matthew Grady</a></div>
-        <div>
+        <div class="nav-brand">
+            <a href="../index.html">Matthew Grady</a>
+        </div>
+        <div class="nav-links">
             <a href="../index.html">Home</a>
             <a href="../games.html">Games</a>
             <a href="../programs.html">Programs</a>
@@ -17,25 +26,109 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <h1>Nature Quest App</h1>
-        <p>Group application project centered on usability, structure, and interactive learning features.</p>
-    </section>
+    <main>
+        <section class="hero hero-small">
+            <div class="hero-inner">
+                <div class="hero-emblem" aria-hidden="true">
+                    <div class="hero-ring hero-ring-1"></div>
+                    <div class="hero-ring hero-ring-2"></div>
+                    <div class="hero-ring hero-ring-3"></div>
+                    <div class="hero-core"></div>
+                    <div class="hero-dot hero-dot-1"></div>
+                    <div class="hero-dot hero-dot-2"></div>
+                    <div class="hero-dot hero-dot-3"></div>
+                    <div class="hero-dot hero-dot-4"></div>
+                </div>
 
-    <section class="projects">
-        <div class="card" style="max-width: 900px; margin: 0 auto; text-align: left;">
-            <h2>Overview</h2>
-            <p>Nature Quest is a group-built application project designed around structured interaction and user-focused functionality.</p>
+                <div class="hero-kicker">FlutterFlow • Team Lead • UX • Educational App</div>
+                <h1>Nature Quest App</h1>
+                <p>
+                    A team-built educational app designed to encourage environmental exploration through map-based discovery, quizzes, badges, and community interaction.
+                </p>
+            </div>
+        </section>
 
-            <h2>My Role</h2>
-            <p>Contributed to app structure, feature implementation, and project development within a group setting.</p>
+        <section class="projects section-shell project-page">
+            <img src="../assets/images/nexus.png" class="project-image project-hero-image" alt="Nature Quest app image">
 
-            <h2>Technical Focus</h2>
-            <p>Focused on usability, interaction flow, and practical application structure.</p>
+            <div class="card project-meta-card">
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Project Type</span>
+                        <span class="meta-value">Software Engineering Team Project</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">UX, Progression, Social Learning</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tools</span>
+                        <span class="meta-value">FlutterFlow, NoSQL Backend</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Team Leader</span>
+                    </div>
+                </div>
+            </div>
 
-            <h2>Current State</h2>
-            <p>The project represents collaborative app development and structured implementation work.</p>
-        </div>
-    </section>
+            <div class="card project-content-card">
+                <h2>Overview</h2>
+                <p>
+                    Nature Quest was designed as an educational application aligned with the United Nations Sustainable Development Goal 15: Life on Land. The concept centers on helping users learn about environmentally important locations, track visits, complete quizzes, earn badges and stars, and engage with others through map-based exploration and social features.
+                </p>
+
+                <h2>My Role</h2>
+                <p>
+                    In the group project, I effectively took on the role of Team Leader. I organized the team’s workflow, created the shared collaboration structure, maintained documentation and timesheets, and worked across planning, database support, feature descriptions, and project management. I also created the GitHub repository for the application and worked heavily on the Technical Design Document, including editing, updating, and publishing the final version.
+                </p>
+
+                <h2>Core App Structure</h2>
+                <p>
+                    The application was structured around four main sections: <strong>Map</strong>, <strong>Profile</strong>, <strong>Feed</strong>, and <strong>Settings</strong>. The map acts as the central hub, showing the user’s current GPS-driven blue marker alongside pins for locations of interest. The profile area tracks badges and progress, the feed supports posts and image sharing, and the broader app flow includes onboarding, login, notifications, quizzes, and reward systems.
+                </p>
+
+                <h2>Key Features</h2>
+                <ul class="project-list">
+                    <li><strong>Map-Based Exploration:</strong> Users can view environmental locations on a map with GPS-updated current position and static markers for places of interest.</li>
+                    <li><strong>Quizzes & Learning:</strong> Visiting locations can unlock quizzes tied to those places, helping turn exploration into structured educational interaction.</li>
+                    <li><strong>Badges & Stars:</strong> Users earn badges for visiting locations, with badge progression supported by stars earned through quizzes, posting, and sharing.</li>
+                    <li><strong>Feed & Social Features:</strong> Users can upload images, create posts tied to locations, and share achievements externally.</li>
+                    <li><strong>Notifications:</strong> The app is designed to notify users when they reach relevant areas, encouraging discovery of nearby environmental points.</li>
+                    <li><strong>Onboarding & Login Flow:</strong> The app includes splash, onboarding, registration, and login states to support first-time and returning users.</li>
+                </ul>
+
+                <h2>Technical Focus</h2>
+                <p>
+                    The project emphasized software structure, usability, and data-backed progression rather than game mechanics in the traditional sense. The TDD specifies a NoSQL database for storing user information, badges, posts, and locations, allowing more flexible object structures for location data and related content. The frontend work was designed in FlutterFlow, while the overall system included backend/API and database planning as part of the wider team effort.
+                </p>
+                <p>
+                    A large part of my contribution was organizational and structural: I helped shape the database planning in a broad sense, assisted with the engineering and design of the app’s functions, and took a major role in documenting how the application was intended to work.
+                </p>
+
+                <h2>Design Goals</h2>
+                <p>
+                    Nature Quest aimed to combine educational content with stronger user engagement than purely functional civic or environmental apps. The team’s research explicitly looked at examples like Love Clean Streets, Falling Fruit, and Duolingo, drawing on map interaction, community features, and gamified motivation to create something more engaging than a simple information tool.
+                </p>
+
+                <h2>Testing & User Flow</h2>
+                <p>
+                    The TDD lays out a clear end-to-end user journey: opening splash screens, registering or logging in, navigating between map, feed, and profile, selecting map markers, taking quizzes, posting content, inviting friends, and logging out. The testing plan focused on verifying both isolated features and the full user path through the application.
+                </p>
+
+                <h2>Outcome</h2>
+                <p>
+                    Nature Quest is one of the strongest examples in my portfolio of collaborative planning, team leadership, and applied software design outside of pure game development. Even though it is more of a teaching and engagement tool than a game, it still reflects many of the design principles I care about most: clear structure, progression systems, user-facing feedback, and building software around how people actually navigate and use it.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by Matthew Grady</p>
+    </footer>
+
+    <div class="page-transition"></div>
+    <script src="../js/transitions.js"></script>
 </body>
 </html>

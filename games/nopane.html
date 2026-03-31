@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mistborn Prototype | Matthew Grady</title>
+    <title>No Pane No Game | Matthew Grady</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
+    <div class="bg-stars"></div>
+    <div class="bg-cosmere"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
     <nav>
-        <div><a href="../index.html">Matthew Grady</a></div>
-        <div>
+        <div class="nav-brand">
+            <a href="../index.html">Matthew Grady</a>
+        </div>
+        <div class="nav-links">
             <a href="../index.html">Home</a>
             <a href="../games.html">Games</a>
             <a href="../programs.html">Programs</a>
@@ -17,32 +26,129 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <h1>Mistborn Prototype</h1>
-        <p>Gameplay prototype exploring movement, interaction, and systems inspired by Mistborn mechanics.</p>
-    </section>
+    <main>
+        <section class="hero hero-small">
+            <div class="hero-inner">
+                <div class="hero-emblem" aria-hidden="true">
+                    <div class="hero-ring hero-ring-1"></div>
+                    <div class="hero-ring hero-ring-2"></div>
+                    <div class="hero-ring hero-ring-3"></div>
+                    <div class="hero-core"></div>
+                    <div class="hero-dot hero-dot-1"></div>
+                    <div class="hero-dot hero-dot-2"></div>
+                    <div class="hero-dot hero-dot-3"></div>
+                    <div class="hero-dot hero-dot-4"></div>
+                </div>
 
-    <section class="projects">
-        <div class="card" style="max-width: 900px; margin: 0 auto; text-align: left;">
-            <h2>Overview</h2>
-            <p>This prototype explores gameplay systems and interaction ideas inspired by Mistborn, with a focus on translating thematic mechanics into readable play.</p>
+                <div class="hero-kicker">C++ • Physics • AI • Networking</div>
+                <h1>No Pane No Game</h1>
+                <p>
+                    A real-time game technologies project built around physics-driven courier gameplay, fragile-object delivery, enemy AI, and a networked co-op expansion.
+                </p>
+            </div>
+        </section>
 
-            <h2>My Role</h2>
-            <p>Designed and implemented prototype systems, interaction flow, and gameplay structure.</p>
+        <section class="projects section-shell project-page">
+            <img src="../assets/images/mygame.png" class="project-image project-hero-image" alt="No Pane No Game gameplay image">
 
-            <h2>Core Systems</h2>
-            <ul>
-                <li>Player movement and interaction</li>
-                <li>Prototype gameplay mechanics</li>
-                <li>System iteration and tuning</li>
-            </ul>
+            <div class="card project-meta-card">
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Language</span>
+                        <span class="meta-value">C++</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Module</span>
+                        <span class="meta-value">Real Time Game Technologies</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">Physics, AI, Networking</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Role</span>
+                        <span class="meta-value">Design &amp; Implementation</span>
+                    </div>
+                </div>
+            </div>
 
-            <h2>Technical Focus</h2>
-            <p>Focused on prototyping mechanics quickly, testing interaction ideas, and shaping systems around player readability.</p>
+            <div class="card project-content-card">
+                <h2>Overview</h2>
+                <p>
+                    No Pane No Game is a courier-focused game project built from the module codebase for CSC8503. The central gameplay loop revolves around transporting fragile objects through hazard-filled spaces without dropping or breaking them, while navigating platforming challenges, enemy AI, timers, and environmental obstacles.
+                </p>
 
-            <h2>Current State</h2>
-            <p>The project serves as an exploratory gameplay prototype and technical sandbox.</p>
-        </div>
-    </section>
+                <h2>My Role</h2>
+                <p>
+                    I designed and implemented the game systems, level flow, AI encounters, networking features, and user-facing structure. The project focused on demonstrating the core module pillars: collision and physics systems, AI behavior, raycasting-supported logic, and multiplayer networking.
+                </p>
+
+                <h2>Core Systems</h2>
+                <ul class="project-list">
+                    <li><strong>Physics-Based Courier Gameplay:</strong> The player transports a fragile ball or pane through levels built around movement, timing, and safe delivery.</li>
+                    <li><strong>Collision &amp; Resolution:</strong> The project uses the main collision detection types required by the module along with impulse-based collision resolution.</li>
+                    <li><strong>AI Behaviors:</strong> Patrol and chase logic drive several enemy encounters, with raycasting used to support additional gameplay behavior.</li>
+                    <li><strong>Menus &amp; Level Flow:</strong> The game includes level selection, replay flow, and user-facing menu support across the experience.</li>
+                    <li><strong>Networking:</strong> The multiplayer mode includes shared-object carrying, gameplay packet structures, and a server-maintained high-score system.</li>
+                </ul>
+
+                <h2>Singleplayer Progression</h2>
+                <p>
+                    The singleplayer campaign is structured as a sequence of distinct challenge levels. The tutorial introduces movement, jumping, and fragile-ball interaction through a wobbling bridge and delivery zone. Later levels build into floating platform traversal, pendulum timing hazards, a kitchen encounter with a patrolling human AI, a timed maze, and a final goose-driven chase space. :contentReference[oaicite:1]{index=1}
+                </p>
+                <ul class="project-list">
+                    <li><strong>Tutorial:</strong> Basic controls, bridge crossing, ball pickup, and delivery.</li>
+                    <li><strong>Level 1:</strong> Straightforward platforming and safe return delivery.</li>
+                    <li><strong>Level 2:</strong> Swinging red pendulums introduce timing pressure.</li>
+                    <li><strong>Level 3:</strong> A kitchen-themed space where a patrolling human AI chases the player if the ball is taken.</li>
+                    <li><strong>Level 4:</strong> A narrow maze with a time limit.</li>
+                    <li><strong>Level 5:</strong> An aggressive goose AI that patrols and chases through corridors.</li>
+                </ul>
+
+                <h2>Multiplayer Expansion</h2>
+                <p>
+                    The multiplayer component expands the design into a cooperative “Borosilicate Buddies” mode, where two players must carry a shared fragile pane together. The pane respawns if dropped or broken, and the environment introduces new co-op-specific hazards and checkpoint-based progression. The later stages include a hedge maze patrolled by a BFS pathfinding enemy and a final shooter arena with turret fire and cover-based movement. :contentReference[oaicite:2]{index=2}
+                </p>
+                <ul class="project-list">
+                    <li><strong>Stage 1:</strong> Shared carrying in a starting arena.</li>
+                    <li><strong>Stage 2:</strong> Narrow bridge traversal through a pendulum gauntlet.</li>
+                    <li><strong>Stage 3:</strong> Hedge maze with a BFS-driven “security dog” chasing players or the dropped pane.</li>
+                    <li><strong>Stage 4:</strong> Final shooter arena with turret bursts, reload windows, and cover use.</li>
+                </ul>
+
+                <h2>Technical Highlights</h2>
+                <p>
+                    The strongest technical areas in the project are the integration of gameplay networking, packet-driven multiplayer interactions, and the broad demonstration of the module’s required systems. The feedback especially highlighted the menu flow, high-score networking, and structured packet use as strengths, while also noting that the project would have benefited from broader collision support such as OBB/sphere combinations, plus more advanced restitution and friction logic.
+                </p>
+
+                <h2>Design Challenges</h2>
+                <p>
+                    The design challenge was not just creating obstacles, but making them interact meaningfully with a fragile-object delivery loop. Hazards like pendulums, patrol enemies, chasers, mazes, and projectile threats all needed to support the same core tension: maintaining control of the carried object while reading the space quickly and reacting under pressure.
+                </p>
+
+                <h2>Controls</h2>
+                <ul class="project-list">
+                    <li><strong>WASD:</strong> Move</li>
+                    <li><strong>Space:</strong> Jump</li>
+                    <li><strong>Scroll Wheel:</strong> Zoom in / Zoom out</li>
+                    <li><strong>E:</strong> Pick up / drop object</li>
+                    <li><strong>P:</strong> Pause</li>
+                    <li><strong>R:</strong> Reset world and camera</li>
+                </ul>
+
+                <h2>Outcome</h2>
+                <p>
+                    No Pane No Game demonstrates a solid application of real-time gameplay programming concepts across physics, collision response, AI logic, raycasting, UI flow, and multiplayer expansion. It works especially well as a systems-driven coursework project because each part of the design is built to exercise a different technical pillar while still serving a coherent gameplay premise.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by Matthew Grady</p>
+    </footer>
+
+    <div class="page-transition"></div>
+    <script src="../js/transitions.js"></script>
 </body>
 </html>
