@@ -17,8 +17,28 @@ function clearStoredTransition() {
     sessionStorage.removeItem("pageTransition");
 }
 
+function clearPageState() {
+    document.body.classList.remove(
+        "page-enter-from-right",
+        "page-enter-from-left",
+        "page-exit-to-left",
+        "page-exit-to-right"
+    );
+
+    const overlay = document.querySelector(".page-transition");
+    if (overlay) {
+        overlay.classList.remove("is-active");
+    }
+
+    document.querySelectorAll(".card-link.is-clicked").forEach((link) => {
+        link.classList.remove("is-clicked");
+    });
+}
+
 function applyEntryTransition() {
     const transition = getStoredTransition();
+
+    clearPageState();
 
     if (transition === "from-right") {
         document.body.classList.add("page-enter-from-right");
@@ -114,4 +134,12 @@ document.addEventListener("DOMContentLoaded", () => {
     applyEntryTransition();
     handleNavTransitions();
     handleCardTransitions();
+});
+
+window.addEventListener("pageshow", () => {
+    clearPageState();
+});
+
+window.addEventListener("popstate", () => {
+    clearPageState();
 });
