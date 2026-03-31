@@ -824,7 +824,10 @@ main {
 /* PROJECT DETAIL PAGES */
 .project-page {
     max-width: 980px;
+    margin: 0 auto;
 }
+
+
 
 .project-hero-image {
     width: 100%;
@@ -832,6 +835,15 @@ main {
     display: block;
     margin: 0 auto 24px;
     box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+}
+
+.project-page > .project-image,
+.project-page > .project-hero-image,
+.project-page > .card {
+    width: 100%;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-meta-card,
