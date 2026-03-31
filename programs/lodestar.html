@@ -8,9 +8,17 @@
 </head>
 
 <body>
+    <div class="bg-stars"></div>
+    <div class="bg-cosmere"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
     <nav>
-        <div><a href="../index.html">Matthew Grady</a></div>
-        <div>
+        <div class="nav-brand">
+            <a href="../index.html">Matthew Grady</a>
+        </div>
+        <div class="nav-links">
             <a href="../index.html">Home</a>
             <a href="../games.html">Games</a>
             <a href="../programs.html">Programs</a>
@@ -18,68 +26,100 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <h1>Lodestar</h1>
-        <p>
-            An offline-first convention planning app built in Flutter to help attendees browse events, manage schedules, and navigate venues in a live event environment.
-        </p>
-    </section>
+    <main>
+        <section class="hero hero-small">
+            <div class="hero-inner">
+                <div class="hero-emblem" aria-hidden="true">
+                    <div class="hero-ring hero-ring-1"></div>
+                    <div class="hero-ring hero-ring-2"></div>
+                    <div class="hero-ring hero-ring-3"></div>
+                    <div class="hero-core"></div>
+                    <div class="hero-dot hero-dot-1"></div>
+                    <div class="hero-dot hero-dot-2"></div>
+                    <div class="hero-dot hero-dot-3"></div>
+                    <div class="hero-dot hero-dot-4"></div>
+                </div>
 
-    <section class="projects">
-        <img src="../assets/images/lodestar.png" class="project-image" alt="Lodestar app screenshot">
-
-        <div class="card" style="max-width: 900px; margin: 0 auto 24px auto;">
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; text-align: left;">
-                <div><strong>Framework:</strong> Flutter</div>
-                <div><strong>Language:</strong> Dart</div>
-                <div><strong>Storage:</strong> Hive</div>
-                <div><strong>Focus:</strong> Offline-First UX</div>
+                <div class="hero-kicker">Flutter • Dart • Offline-First • Convention Planning</div>
+                <h1>Lodestar</h1>
+                <p>
+                    An offline-first convention planning app built in Flutter to help attendees browse events, manage schedules, and navigate venues in a live event environment.
+                </p>
             </div>
-        </div>
+        </section>
 
-        <div class="card" style="max-width: 900px; margin: 0 auto 24px auto; text-align: left;">
-            <h2>Overview</h2>
-            <p>
-                Lodestar is a convention planning app designed around the realities of live events: limited connectivity, multi-room schedules, overlapping sessions, and the need to move quickly between locations. Rather than relying on always-online features, the app is built to remain useful through local data, personal schedule tools, and venue-aware navigation.
-            </p>
+        <section class="projects section-shell project-page">
+            <img src="../assets/images/lodestar.png" class="project-image project-hero-image" alt="Lodestar app screenshot">
 
-            <h2>My Role</h2>
-            <p>
-                I designed and implemented the app structure, event browsing flow, personal schedule features, and venue navigation experience. The project focused on creating a practical, user-facing tool that could support real convention use rather than just presenting schedule data.
-            </p>
+            <div class="card project-meta-card">
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Framework</span>
+                        <span class="meta-value">Flutter</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Language</span>
+                        <span class="meta-value">Dart</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Storage</span>
+                        <span class="meta-value">Hive</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">Offline-First UX</span>
+                    </div>
+                </div>
+            </div>
 
-            <h2>Core Features</h2>
-            <ul>
-                <li><strong>Offline-First Event Access:</strong> Event and venue information can be loaded and used without depending on constant connectivity.</li>
-                <li><strong>Personal Schedule Building:</strong> Users can favorite events, create a personal schedule, and manage their own convention plans.</li>
-                <li><strong>Conflict Detection:</strong> The app detects overlapping events and warns users when schedule choices clash.</li>
-                <li><strong>Personal Event Creation:</strong> Users can add their own custom events into the schedule alongside convention programming.</li>
-                <li><strong>Venue Navigation:</strong> Map and routing tools help users move between start and destination rooms.</li>
-                <li><strong>Search & Filtering:</strong> Users can filter by day, location, and type, with fuzzy search support for easier event discovery.</li>
-                <li><strong>Notifications:</strong> Reminder scheduling supports upcoming event awareness.</li>
-            </ul>
+            <div class="card project-content-card">
+                <h2>Overview</h2>
+                <p>
+                    Lodestar is a convention planning app designed around the realities of live events: limited connectivity, multi-room schedules, overlapping sessions, and the need to move quickly between locations. Rather than relying on always-online features, the app is built to remain useful through local data, personal schedule tools, and venue-aware navigation.
+                </p>
 
-            <h2>Technical Focus</h2>
-            <p>
-                Lodestar is structured around service-driven app architecture. Event loading, venue loading, favorites storage, user data, routing, and notification handling are separated into dedicated services, making the project easier to extend and maintain. Local persistence is handled with Hive, allowing the app to retain useful state between sessions.
-            </p>
-            <p>
-                On the UI side, the app uses a tab-based structure with dedicated event, schedule, and map views. I also implemented custom styling logic tied to room and world themes, allowing the schedule experience to feel more visually distinct than a standard list-based planner.
-            </p>
+                <h2>My Role</h2>
+                <p>
+                    I designed and implemented the app structure, event browsing flow, personal schedule features, and venue navigation experience. The project focused on creating a practical, user-facing tool that could support real convention use rather than just presenting schedule data.
+                </p>
 
-            <h2>Design Challenges</h2>
-            <p>
-                One of the biggest challenges was balancing feature depth against usability. Convention schedules can become cluttered quickly, so the interface had to support filtering, schedule management, routing, and conflict awareness without becoming slow to read or cumbersome to navigate during a live event.
-            </p>
-            <p>
-                Another challenge was building around real-world edge cases, such as partial data, fuzzy searches, missing times, and user-created events that need to coexist cleanly with scheduled convention content.
-            </p>
+                <h2>Core Features</h2>
+                <ul class="project-list">
+                    <li><strong>Offline-First Event Access:</strong> Event and venue information can be loaded and used without depending on constant connectivity.</li>
+                    <li><strong>Personal Schedule Building:</strong> Users can favorite events, create a personal schedule, and manage their own convention plans.</li>
+                    <li><strong>Conflict Detection:</strong> The app detects overlapping events and warns users when schedule choices clash.</li>
+                    <li><strong>Personal Event Creation:</strong> Users can add their own custom events into the schedule alongside convention programming.</li>
+                    <li><strong>Venue Navigation:</strong> Map and routing tools help users move between start and destination rooms.</li>
+                    <li><strong>Search &amp; Filtering:</strong> Users can filter by day, location, and type, with fuzzy search support for easier event discovery.</li>
+                    <li><strong>Notifications:</strong> Reminder scheduling supports upcoming event awareness.</li>
+                </ul>
 
-            <h2>Development Status</h2>
-            <p>
-                Lodestar is an active app project with strong foundations in offline-first event browsing, schedule management, and venue navigation. The current build demonstrates practical mobile architecture, structured data handling, and user-focused planning tools, with room for future expansion into richer map support, vendor modules, and additional convention utility features.
-            </p>
-        </div>
-    </section>
+                <h2>Technical Focus</h2>
+                <p>
+                    Lodestar is structured around service-driven app architecture. Event loading, venue loading, favorites storage, user data, routing, and notification handling are separated into dedicated services, making the project easier to extend and maintain. Local persistence is handled with Hive, allowing the app to retain useful state between sessions.
+                </p>
+                <p>
+                    On the UI side, the app uses a tab-based structure with dedicated event, schedule, and map views. I also implemented custom styling logic tied to room and world themes, allowing the schedule experience to feel more visually distinct than a standard list-based planner.
+                </p>
+
+                <h2>Design Challenges</h2>
+                <p>
+                    One of the biggest challenges was balancing feature depth against usability. Convention schedules can become cluttered quickly, so the interface had to support filtering, schedule management, routing, and conflict awareness without becoming slow to read or cumbersome to navigate during a live event.
+                </p>
+                <p>
+                    Another challenge was building around real-world edge cases, such as partial data, fuzzy searches, missing times, and user-created events that need to coexist cleanly with scheduled convention content.
+                </p>
+
+                <h2>Development Status</h2>
+                <p>
+                    Lodestar is an active app project with strong foundations in offline-first event browsing, schedule management, and venue navigation. The current build demonstrates practical mobile architecture, structured data handling, and user-focused planning tools, with room for future expansion into richer map support, vendor modules, and additional convention utility features.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by Matthew Grady</p>
+    </footer>
 </body>
 </html>

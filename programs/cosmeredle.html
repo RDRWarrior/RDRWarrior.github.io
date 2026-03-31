@@ -8,9 +8,17 @@
 </head>
 
 <body>
+    <div class="bg-stars"></div>
+    <div class="bg-cosmere"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
     <nav>
-        <div><a href="../index.html">Matthew Grady</a></div>
-        <div>
+        <div class="nav-brand">
+            <a href="../index.html">Matthew Grady</a>
+        </div>
+        <div class="nav-links">
             <a href="../index.html">Home</a>
             <a href="../games.html">Games</a>
             <a href="../programs.html">Programs</a>
@@ -18,64 +26,96 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <h1>Cosmeredle Solver</h1>
-        <p>
-            A client-side deduction tool designed to narrow Cosmere character candidates through structured data filtering, live UI updates, and multi-constraint search.
-        </p>
-    </section>
+    <main>
+        <section class="hero hero-small">
+            <div class="hero-inner">
+                <div class="hero-emblem" aria-hidden="true">
+                    <div class="hero-ring hero-ring-1"></div>
+                    <div class="hero-ring hero-ring-2"></div>
+                    <div class="hero-ring hero-ring-3"></div>
+                    <div class="hero-core"></div>
+                    <div class="hero-dot hero-dot-1"></div>
+                    <div class="hero-dot hero-dot-2"></div>
+                    <div class="hero-dot hero-dot-3"></div>
+                    <div class="hero-dot hero-dot-4"></div>
+                </div>
 
-    <section class="projects">
-        <img src="../assets/images/cosmeredle.png" class="project-image" alt="Cosmeredle Solver interface">
-
-        <div class="card" style="max-width: 900px; margin: 0 auto 24px auto;">
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; text-align: left;">
-                <div><strong>Stack:</strong> Vanilla JavaScript</div>
-                <div><strong>Data Source:</strong> JSON</div>
-                <div><strong>Type:</strong> Web Tool</div>
-                <div><strong>Focus:</strong> Constraint-Based Filtering</div>
+                <div class="hero-kicker">JavaScript • JSON • Web Tool • Data Filtering</div>
+                <h1>Cosmeredle Solver</h1>
+                <p>
+                    A client-side deduction tool designed to narrow Cosmere character candidates through structured data filtering, live UI updates, and multi-constraint search.
+                </p>
             </div>
-        </div>
+        </section>
 
-        <div class="card" style="max-width: 900px; margin: 0 auto 24px auto; text-align: left;">
-            <h2>Overview</h2>
-            <p>
-                Cosmeredle Solver is a browser-based deduction tool built to help users narrow down possible Cosmere character candidates in a puzzle-style format. Instead of manually tracking possibilities, the tool lets users apply multiple constraints at once and immediately see the filtered candidate pool update in real time.
-            </p>
+        <section class="projects section-shell project-page">
+            <img src="../assets/images/cosmeredle.png" class="project-image project-hero-image" alt="Cosmeredle Solver interface">
 
-            <h2>My Role</h2>
-            <p>
-                I designed and implemented the filtering logic, interface structure, and state flow for the tool. The goal was to create a fast, readable system that could handle many simultaneous constraints without becoming difficult to use.
-            </p>
+            <div class="card project-meta-card">
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Stack</span>
+                        <span class="meta-value">Vanilla JavaScript</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Data Source</span>
+                        <span class="meta-value">JSON</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Type</span>
+                        <span class="meta-value">Web Tool</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">Constraint-Based Filtering</span>
+                    </div>
+                </div>
+            </div>
 
-            <h2>Core Features</h2>
-            <ul>
-                <li><strong>Live Multi-Constraint Filtering:</strong> Characters can be narrowed by world, first appearance, species base, subtype, and abilities.</li>
-                <li><strong>Positive and Negative Rules:</strong> Users can define both what a candidate must have and what they must not have.</li>
-                <li><strong>Dynamic Control Population:</strong> Filter controls are populated directly from the dataset rather than hard-coded.</li>
-                <li><strong>Dependent Filter Updating:</strong> Available options shrink as candidates are removed, keeping the UI aligned with valid possibilities.</li>
-                <li><strong>Searchable Filter Lists:</strong> Large checkbox groups remain usable through built-in search inputs.</li>
-                <li><strong>Selected Candidate Details:</strong> Clicking a result shows a structured detail panel for the selected character.</li>
-            </ul>
+            <div class="card project-content-card">
+                <h2>Overview</h2>
+                <p>
+                    Cosmeredle Solver is a browser-based deduction tool built to help users narrow down possible Cosmere character candidates in a puzzle-style format. Instead of manually tracking possibilities, the tool lets users apply multiple constraints at once and immediately see the filtered candidate pool update in real time.
+                </p>
 
-            <h2>Technical Focus</h2>
-            <p>
-                The project centers on client-side data handling and UI-driven state updates. Character data is loaded from JSON, controls are generated from the dataset, and the filtering pipeline applies a sequence of inclusion, exclusion, and relational rules to produce the remaining candidate list.
-            </p>
-            <p>
-                A key technical focus was maintaining consistency between the result set and the available controls. As filters change, dependent controls update to reflect only possible remaining values while preserving any active selections already chosen by the user.
-            </p>
+                <h2>My Role</h2>
+                <p>
+                    I designed and implemented the filtering logic, interface structure, and state flow for the tool. The goal was to create a fast, readable system that could handle many simultaneous constraints without becoming difficult to use.
+                </p>
 
-            <h2>Design Challenges</h2>
-            <p>
-                The main challenge was balancing complexity and readability. The solver needed to support many overlapping filters while still making it clear why the candidate count was changing. This required careful handling of active filter visibility, reset behavior, search within filter groups, and selected-character feedback.
-            </p>
+                <h2>Core Features</h2>
+                <ul class="project-list">
+                    <li><strong>Live Multi-Constraint Filtering:</strong> Characters can be narrowed by world, first appearance, species base, subtype, and abilities.</li>
+                    <li><strong>Positive and Negative Rules:</strong> Users can define both what a candidate must have and what they must not have.</li>
+                    <li><strong>Dynamic Control Population:</strong> Filter controls are populated directly from the dataset rather than hard-coded.</li>
+                    <li><strong>Dependent Filter Updating:</strong> Available options shrink as candidates are removed, keeping the UI aligned with valid possibilities.</li>
+                    <li><strong>Searchable Filter Lists:</strong> Large checkbox groups remain usable through built-in search inputs.</li>
+                    <li><strong>Selected Candidate Details:</strong> Clicking a result shows a structured detail panel for the selected character.</li>
+                </ul>
 
-            <h2>Development Status</h2>
-            <p>
-                Cosmeredle Solver is a completed utility-style project that demonstrates structured front-end logic, interactive filtering systems, and a focused data-driven interface for solving a niche but complex problem.
-            </p>
-        </div>
-    </section>
+                <h2>Technical Focus</h2>
+                <p>
+                    The project centers on client-side data handling and UI-driven state updates. Character data is loaded from JSON, controls are generated from the dataset, and the filtering pipeline applies a sequence of inclusion, exclusion, and relational rules to produce the remaining candidate list.
+                </p>
+                <p>
+                    A key technical focus was maintaining consistency between the result set and the available controls. As filters change, dependent controls update to reflect only possible remaining values while preserving any active selections already chosen by the user.
+                </p>
+
+                <h2>Design Challenges</h2>
+                <p>
+                    The main challenge was balancing complexity and readability. The solver needed to support many overlapping filters while still making it clear why the candidate count was changing. This required careful handling of active filter visibility, reset behavior, search within filter groups, and selected-character feedback.
+                </p>
+
+                <h2>Development Status</h2>
+                <p>
+                    Cosmeredle Solver is a completed utility-style project that demonstrates structured front-end logic, interactive filtering systems, and a focused data-driven interface for solving a niche but complex problem.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by Matthew Grady</p>
+    </footer>
 </body>
 </html>

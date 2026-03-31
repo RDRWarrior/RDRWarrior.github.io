@@ -7,9 +7,17 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+    <div class="bg-stars"></div>
+    <div class="bg-cosmere"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
     <nav>
-        <div><a href="../index.html">Matthew Grady</a></div>
-        <div>
+        <div class="nav-brand">
+            <a href="../index.html">Matthew Grady</a>
+        </div>
+        <div class="nav-links">
             <a href="../index.html">Home</a>
             <a href="../games.html">Games</a>
             <a href="../programs.html">Programs</a>
@@ -17,67 +25,99 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <h1>Fluidization Simulator</h1>
-        <p>
-            Dissertation project exploring real-time hybrid-state simulation in Unity through a custom physics-based mass-spring system.
-        </p>
-    </section>
+    <main>
+        <section class="hero hero-small">
+            <div class="hero-inner">
+                <div class="hero-emblem" aria-hidden="true">
+                    <div class="hero-ring hero-ring-1"></div>
+                    <div class="hero-ring hero-ring-2"></div>
+                    <div class="hero-ring hero-ring-3"></div>
+                    <div class="hero-core"></div>
+                    <div class="hero-dot hero-dot-1"></div>
+                    <div class="hero-dot hero-dot-2"></div>
+                    <div class="hero-dot hero-dot-3"></div>
+                    <div class="hero-dot hero-dot-4"></div>
+                </div>
 
-    <section class="projects">
-        <img src="../assets/images/fluidization.png" class="project-image" alt="Fluidization Simulator main image">
-
-        <div class="card" style="max-width: 900px; margin: 0 auto 24px auto;">
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; text-align: left;">
-                <div><strong>Engine:</strong> Unity</div>
-                <div><strong>Language:</strong> C#</div>
-                <div><strong>Project Type:</strong> Dissertation</div>
-                <div><strong>Focus:</strong> Real-Time Simulation</div>
+                <div class="hero-kicker">Unity • C# • Dissertation • Real-Time Simulation</div>
+                <h1>Fluidization Simulator</h1>
+                <p>
+                    Dissertation project exploring real-time hybrid-state simulation in Unity through a custom physics-based mass-spring system.
+                </p>
             </div>
-        </div>
+        </section>
 
-        <div class="card" style="max-width: 900px; margin: 0 auto 24px auto; text-align: left;">
-            <h2>Overview</h2>
-            <p>
-                Fluidization Simulator is my dissertation project, focused on simulating the binary solid/fluid-like behavior of a reactive particulate medium in Unity. Rather than attempting a conventional water simulation, the project explores how a semi-solid material can shift between stable and fluidized states while remaining interactive in real time.
-            </p>
+        <section class="projects section-shell project-page">
+            <img src="../assets/images/fluidization.png" class="project-image project-hero-image" alt="Fluidization Simulator main image">
 
-            <h2>My Role</h2>
-            <p>
-                I designed and implemented the simulation system, including the custom physics approach, state transition behavior, and interactive object support. The project required technical research, experimentation, and iterative tuning to balance responsiveness, stability, and performance.
-            </p>
+            <div class="card project-meta-card">
+                <div class="project-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Engine</span>
+                        <span class="meta-value">Unity</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Language</span>
+                        <span class="meta-value">C#</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Project Type</span>
+                        <span class="meta-value">Dissertation</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">Real-Time Simulation</span>
+                    </div>
+                </div>
+            </div>
 
-            <h2>Core Systems</h2>
-            <ul>
-                <li><strong>Mass-Spring Lattice:</strong> Built from Rigidbody-based particles connected through SpringJoints to create a deformable simulation bed.</li>
-                <li><strong>Hybrid State Behavior:</strong> The system can transition between more stable and more fluid-like states in real time.</li>
-                <li><strong>Interactive Objects:</strong> The simulation supports floating, sinking, and object interaction depending on the current state.</li>
-                <li><strong>Runtime Tuning:</strong> Parameters were exposed and adjusted during testing to support iteration and control.</li>
-            </ul>
+            <div class="card project-content-card">
+                <h2>Overview</h2>
+                <p>
+                    Fluidization Simulator is my dissertation project, focused on simulating the binary solid/fluid-like behavior of a reactive particulate medium in Unity. Rather than attempting a conventional water simulation, the project explores how a semi-solid material can shift between stable and fluidized states while remaining interactive in real time.
+                </p>
 
-            <h2>Technical Focus</h2>
-            <p>
-                A major focus of the project was building a fully controllable Unity-native solution rather than depending on black-box fluid plugins. This allowed the simulation to prioritize interactivity, visibility of system behavior, and direct manipulation of physical parameters.
-            </p>
+                <h2>My Role</h2>
+                <p>
+                    I designed and implemented the simulation system, including the custom physics approach, state transition behavior, and interactive object support. The project required technical research, experimentation, and iterative tuning to balance responsiveness, stability, and performance.
+                </p>
 
-            <h2>Design Challenges</h2>
-            <p>
-                The central challenge was balancing convincing material behavior with runtime performance and system clarity. The project needed to support both structural stability and destabilized motion while remaining responsive enough to demonstrate the concept in a real-time environment.
-            </p>
+                <h2>Core Systems</h2>
+                <ul class="project-list">
+                    <li><strong>Mass-Spring Lattice:</strong> Built from Rigidbody-based particles connected through SpringJoints to create a deformable simulation bed.</li>
+                    <li><strong>Hybrid State Behavior:</strong> The system can transition between more stable and more fluid-like states in real time.</li>
+                    <li><strong>Interactive Objects:</strong> The simulation supports floating, sinking, and object interaction depending on the current state.</li>
+                    <li><strong>Runtime Tuning:</strong> Parameters were exposed and adjusted during testing to support iteration and control.</li>
+                </ul>
 
-            <h2>Development Status</h2>
-            <p>
-                The simulator demonstrates a successful first-pass implementation of hybrid-state behavior and interactive object support, while also leaving room for future optimization and visual refinement.
-            </p>
-        </div>
+                <h2>Technical Focus</h2>
+                <p>
+                    A major focus of the project was building a fully controllable Unity-native solution rather than depending on black-box fluid plugins. This allowed the simulation to prioritize interactivity, visibility of system behavior, and direct manipulation of physical parameters.
+                </p>
 
-        <div class="card" style="max-width: 900px; margin: 0 auto 24px auto; text-align: left;">
-            <h2>Simulation Structure / Lattice View</h2>
-            <img src="../assets/images/fluidization_grid.png" class="project-image" alt="Fluidization Simulator grid view">
-            <p>
-                Development view of the particle lattice structure used to build the simulation bed. This image highlights the system’s underlying mass-spring organization and the technical structure that supports its state transitions.
-            </p>
-        </div>
-    </section>
+                <h2>Design Challenges</h2>
+                <p>
+                    The central challenge was balancing convincing material behavior with runtime performance and system clarity. The project needed to support both structural stability and destabilized motion while remaining responsive enough to demonstrate the concept in a real-time environment.
+                </p>
+
+                <h2>Development Status</h2>
+                <p>
+                    The simulator demonstrates a successful first-pass implementation of hybrid-state behavior and interactive object support, while also leaving room for future optimization and visual refinement.
+                </p>
+            </div>
+
+            <div class="card project-showcase-card">
+                <h2>Simulation Structure / Lattice View</h2>
+                <img src="../assets/images/fluidization_grid.png" class="project-image" alt="Fluidization Simulator grid view">
+                <p>
+                    Development view of the particle lattice structure used to build the simulation bed. This image highlights the system’s underlying mass-spring organization and the technical structure that supports its state transitions.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Built by Matthew Grady</p>
+    </footer>
 </body>
 </html>
