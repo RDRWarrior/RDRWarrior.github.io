@@ -1,0 +1,188 @@
+/* ========================================
+   THEME LAYER
+   Keeps section-specific visual identity
+   separate from the base layout in styles.css
+======================================== */
+
+/* Shared ambient side framing */
+.theme-home,
+.theme-games,
+.theme-programs,
+.theme-about {
+    position: relative;
+}
+
+.theme-home::before,
+.theme-home::after,
+.theme-games::before,
+.theme-games::after,
+.theme-programs::before,
+.theme-programs::after,
+.theme-about::before,
+.theme-about::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: min(18vw, 260px);
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+/* left frame */
+.theme-home::before,
+.theme-games::before,
+.theme-programs::before,
+.theme-about::before {
+    left: 0;
+}
+
+/* right frame */
+.theme-home::after,
+.theme-games::after,
+.theme-programs::after,
+.theme-about::after {
+    right: 0;
+}
+
+/* ========================================
+   HOME THEME
+   Hybrid: celestial + technical
+======================================== */
+
+.theme-home::before {
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), transparent 18%, transparent 82%, rgba(255,255,255,0.02)),
+        linear-gradient(90deg, rgba(212, 92, 92, 0.08), transparent 55%),
+        repeating-linear-gradient(
+            180deg,
+            transparent 0 42px,
+            rgba(255,255,255,0.025) 42px 43px
+        ),
+        radial-gradient(circle at 78% 18%, rgba(212, 92, 92, 0.14), transparent 22%),
+        radial-gradient(circle at 72% 72%, rgba(98, 130, 180, 0.10), transparent 18%);
+    mask-image: linear-gradient(to right, rgba(255,255,255,0.92), rgba(255,255,255,0.18) 82%, transparent);
+}
+
+.theme-home::after {
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), transparent 18%, transparent 82%, rgba(255,255,255,0.02)),
+        linear-gradient(270deg, rgba(212, 92, 92, 0.08), transparent 55%),
+        repeating-linear-gradient(
+            180deg,
+            transparent 0 42px,
+            rgba(255,255,255,0.025) 42px 43px
+        ),
+        radial-gradient(circle at 22% 20%, rgba(212, 92, 92, 0.14), transparent 22%),
+        radial-gradient(circle at 28% 74%, rgba(98, 130, 180, 0.10), transparent 18%);
+    mask-image: linear-gradient(to left, rgba(255,255,255,0.92), rgba(255,255,255,0.18) 82%, transparent);
+}
+
+/* Extra ambient layer for Home */
+.theme-home .bg-grid {
+    opacity: 0.11;
+}
+
+.theme-home .bg-cosmere {
+    opacity: 0.48;
+}
+
+.theme-home .bg-stars {
+    opacity: 0.56;
+}
+
+/* Slightly richer hero presence on Home */
+.theme-home .hero-inner {
+    box-shadow:
+        0 0 0 1px rgba(212, 92, 92, 0.06),
+        0 40px 80px rgba(0, 0, 0, 0.30),
+        0 0 120px rgba(212, 92, 92, 0.04);
+}
+
+/* Faint side circuit / constellation accents */
+.theme-home .hero::before,
+.theme-home .projects.section-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+        radial-gradient(2px 2px at 8% 22%, rgba(255,255,255,0.22), transparent 65%),
+        radial-gradient(2px 2px at 92% 32%, rgba(255,255,255,0.18), transparent 65%),
+        linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.05)) left 8% top 24% / 70px 1px no-repeat,
+        linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.05)) right 8% top 34% / 64px 1px no-repeat,
+        linear-gradient(rgba(212,92,92,0.07), rgba(212,92,92,0.07)) left 4% top 58% / 1px 120px no-repeat,
+        linear-gradient(rgba(212,92,92,0.07), rgba(212,92,92,0.07)) right 4% top 62% / 1px 120px no-repeat;
+    opacity: 0.55;
+}
+
+/* Make sure actual content stays above ambient overlays */
+.theme-home .hero > *,
+.theme-home .projects > *,
+.theme-home .home-focus > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional tiny visual distinction for Home cards */
+.theme-home .card::before {
+    background:
+        linear-gradient(135deg, rgba(212, 92, 92, 0.09), transparent 34%),
+        radial-gradient(circle at top right, rgba(90, 120, 180, 0.05), transparent 32%);
+}
+
+/* Slightly stronger tag glow on Home */
+.theme-home .tags span {
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.015);
+}
+
+/* ========================================
+   Placeholder theme sections for later
+======================================== */
+
+.theme-games::before,
+.theme-games::after,
+.theme-programs::before,
+.theme-programs::after,
+.theme-about::before,
+.theme-about::after {
+    opacity: 0;
+}
+
+/* ========================================
+   Responsive reduction
+======================================== */
+
+@media (max-width: 1100px) {
+    .theme-home::before,
+    .theme-home::after,
+    .theme-games::before,
+    .theme-games::after,
+    .theme-programs::before,
+    .theme-programs::after,
+    .theme-about::before,
+    .theme-about::after {
+        width: min(14vw, 160px);
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 720px) {
+    .theme-home::before,
+    .theme-home::after,
+    .theme-games::before,
+    .theme-games::after,
+    .theme-programs::before,
+    .theme-programs::after,
+    .theme-about::before,
+    .theme-about::after {
+        display: none;
+    }
+
+    .theme-home .hero::before,
+    .theme-home .projects.section-shell::before {
+        display: none;
+    }
+}
