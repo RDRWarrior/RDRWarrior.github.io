@@ -5,14 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games | Matthew Grady</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
 </head>
 
-<body>
+<body class="theme-games">
+    <!-- BACKGROUND LAYERS -->
     <div class="bg-stars"></div>
     <div class="bg-cosmere"></div>
     <div class="bg-grid"></div>
     <div class="bg-glow bg-glow-1"></div>
     <div class="bg-glow bg-glow-2"></div>
+
+    <!-- THEME SIDE FRAMING -->
+    <div class="theme-side theme-side-left">
+        <span class="side-objects layer-1"></span>
+        <span class="side-objects layer-2"></span>
+        <span class="side-objects layer-3"></span>
+    </div>
+
+    <div class="theme-side theme-side-right">
+        <span class="side-objects layer-1"></span>
+        <span class="side-objects layer-2"></span>
+        <span class="side-objects layer-3"></span>
+    </div>
 
     <nav>
         <div class="nav-brand">
@@ -28,25 +43,25 @@
 
     <main>
         <section class="hero hero-small">
-    <div class="hero-inner">
-        <div class="hero-emblem" aria-hidden="true">
-            <div class="hero-ring hero-ring-1"></div>
-            <div class="hero-ring hero-ring-2"></div>
-            <div class="hero-ring hero-ring-3"></div>
-            <div class="hero-core"></div>
-            <div class="hero-dot hero-dot-1"></div>
-            <div class="hero-dot hero-dot-2"></div>
-            <div class="hero-dot hero-dot-3"></div>
-            <div class="hero-dot hero-dot-4"></div>
-        </div>
+            <div class="hero-inner">
+                <div class="hero-emblem" aria-hidden="true">
+                    <div class="hero-ring hero-ring-1"></div>
+                    <div class="hero-ring hero-ring-2"></div>
+                    <div class="hero-ring hero-ring-3"></div>
+                    <div class="hero-core"></div>
+                    <div class="hero-dot hero-dot-1"></div>
+                    <div class="hero-dot hero-dot-2"></div>
+                    <div class="hero-dot hero-dot-3"></div>
+                    <div class="hero-dot hero-dot-4"></div>
+                </div>
 
-        <div class="hero-kicker">Games • Systems • Prototypes</div>
-        <h1>Games</h1>
-        <p>
-            A selection of game engineering and gameplay systems projects built in Unity and C++.
-        </p>
-    </div>
-</section>
+                <div class="hero-kicker">Games • Systems • Prototypes</div>
+                <h1>Games</h1>
+                <p>
+                    A selection of game engineering and gameplay systems projects built in Unity and C++.
+                </p>
+            </div>
+        </section>
 
         <section class="projects section-shell">
             <div class="project-grid">
@@ -142,6 +157,7 @@
                         <div class="card-content">
                             <h3>Mellow Yellow Fellow</h3>
                             <p>Unity arcade sequel prototype focused on ghost AI, teleport tunnels, score flow, and classic game-loop structure.</p>
+                            <div class="tags">
                                 <span>Game</span>
                                 <span>Arcade</span>
                                 <span>Prototype</span>
@@ -161,7 +177,8 @@
     <footer class="site-footer">
         <p>Built by Matthew Grady</p>
     </footer>
+
     <div class="page-transition"></div>
-<script src="js/transitions.js"></script>
+    <script src="js/transitions.js"></script>
 </body>
 </html>
