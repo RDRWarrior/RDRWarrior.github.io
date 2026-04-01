@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luthadel / Elendel Rendering Transition | Matthew Grady</title>
+    <title>Prisoner’s Dilemma Simulator | Matthew Grady</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
@@ -40,20 +40,16 @@
                     <div class="hero-dot hero-dot-4"></div>
                 </div>
 
-                <div class="hero-kicker">C++ • OpenGL • Rendering • Scene Transition</div>
-                <h1>Luthadel / Elendel Rendering Transition</h1>
+                <div class="hero-kicker">C++ • CLI • Simulation • Evolutionary Analysis</div>
+                <h1>Prisoner’s Dilemma Simulator</h1>
                 <p>
-                    An Advanced Graphics project that transforms Kredik Shaw’s ash-covered Luthadel into Elendel’s Field of Rebirth through a time-driven visual transition built with custom OpenGL rendering systems.
+                    A modular C++ simulator for iterated Prisoner’s Dilemma tournaments, noise sweeps, exploiter tests, evolutionary dynamics, and strategic complexity analysis.
                 </p>
-
-                <div class="hero-actions">
-                    <a href="https://youtu.be/2sNb_CNIxPY" target="_blank" class="button">Watch Video</a>
-                </div>
             </div>
         </section>
 
         <section class="projects section-shell project-page">
-            <img src="../assets/images/kcapture.png" class="project-image project-hero-image" alt="Luthadel to Elendel rendering project image">
+            <img src="../assets/images/nexus.png" class="project-image project-hero-image" alt="Prisoner’s Dilemma simulator image">
 
             <div class="card project-meta-card">
                 <div class="project-meta-grid">
@@ -62,16 +58,16 @@
                         <span class="meta-value">C++</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Graphics Stack</span>
-                        <span class="meta-value">OpenGL 3.3, GLFW, GLEW</span>
+                        <span class="meta-label">Project Type</span>
+                        <span class="meta-value">Advanced Programming Coursework</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Focus</span>
-                        <span class="meta-value">Rendering, Transition Effects, Scene Systems</span>
+                        <span class="meta-value">Simulation, CLI, Experimental Analysis</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Project Type</span>
-                        <span class="meta-value">Advanced Graphics Transition Project</span>
+                        <span class="meta-label">Mark</span>
+                        <span class="meta-value">95 / 100</span>
                     </div>
                 </div>
             </div>
@@ -79,68 +75,56 @@
             <div class="card project-content-card">
                 <h2>Overview</h2>
                 <p>
-                    This project was built as an Advanced Graphics transition piece inspired by Mistborn. The core idea was to show the destruction of Kredik Shaw and the transformation of Luthadel into Elendel’s Field of Rebirth. The final sequence is not just a static scene swap, but a timed visual narrative in which architecture collapses, ash and mist effects reshape the atmosphere, and the environment transitions from an oppressive red-lit world into a brighter memorial landscape. :contentReference[oaicite:2]{index=2}
+                    This project is a fully featured Iterated Prisoner’s Dilemma simulator built in C++ for advanced programming coursework. It was designed not just to run basic repeated matches, but to support a complete experimental workflow: configurable tournaments, strategy comparison, implementation noise sweeps, exploiter testing, evolutionary tournaments, and strategic complexity penalties inside fitness calculations. The final submission was assessed as an outstanding, professional-quality implementation that fully satisfied the coursework requirements. :contentReference[oaicite:3]{index=3}
                 </p>
 
                 <h2>My Role</h2>
                 <p>
-                    I designed and implemented the full transition experience, including the rendering pipeline, procedural scene construction, environmental effects, camera systems, and the sequential logic controlling the transformation from one era to the next.
+                    I designed and implemented the simulator architecture, command-line interface, match engine, strategy system, experiment runners, statistics pipeline, and analysis outputs. I also documented the project’s development process in detailed implementation notes, from defining the minimal domain model and strategy interface through to tournament runners, reactive strategies, noise support, and evolutionary features. :contentReference[oaicite:4]{index=4} :contentReference[oaicite:5]{index=5}
                 </p>
 
-                <h2>Scene Structure</h2>
-                <p>
-                    The project is built around two primary scene states. The first presents Luthadel under a red sun with drifting ash and Kredik Shaw dominating the skyline. The second shows Elendel’s Field of Rebirth, including a central memorial statue, ring-based park layout, and cleaner daylight atmosphere. The transition between them is time-driven and sequential rather than instantaneous. :contentReference[oaicite:3]{index=3}
-                </p>
-
-                <h2>Core Rendering Features</h2>
+                <h2>Core Features</h2>
                 <ul class="project-list">
-                    <li><strong>Custom Shader Pipeline:</strong> The project uses a custom OpenGL shader pipeline and scene graph system for rendering control and object organization.</li>
-                    <li><strong>Directional Lighting:</strong> Scene lighting includes ambient, diffuse, and specular components, with the sun color interpolating across the transition.</li>
-                    <li><strong>Environment Mapping:</strong> Dual cubemap skyboxes support distinct Luthadel and Elendel atmospheres.</li>
-                    <li><strong>Automatic Camera Track:</strong> A predefined camera spline path presents the scene cinematically until free camera mode is toggled.</li>
-                    <li><strong>Scene Graph Management:</strong> Scene nodes are added and removed in sequence as the transition progresses. :contentReference[oaicite:4]{index=4}
-                    </li>
+                    <li><strong>Modular Strategy System:</strong> Strategies are plug-in modules implementing a shared interface, allowing deterministic and stochastic strategies to be added cleanly.</li>
+                    <li><strong>Tournament Engine:</strong> The simulator supports repeated Prisoner’s Dilemma matches with configurable rounds, repetitions, seat order, and payoff matrices.</li>
+                    <li><strong>Unified CLI:</strong> The command line supports strategies, rounds, repeats, seed, noise, payoff customization, sweeps, exploiter tests, evolutionary mode, SCB, output format, and file export.</li>
+                    <li><strong>Readable and Exportable Output:</strong> Results can be printed in text form or exported as CSV, with ranked summaries and statistical reporting.</li>
+                    <li><strong>Statistical Reporting:</strong> The submission includes means and 95% confidence intervals to support stronger interpretation of outcomes.</li>
                 </ul>
 
-                <h2>Advanced Technical Features</h2>
-                <ul class="project-list">
-                    <li><strong>Real-Time Shadow Mapping:</strong> A dynamic shadow pass updates as collapsing and transforming geometry changes the scene. :contentReference[oaicite:5]{index=5}</li>
-                    <li><strong>Post-Processing:</strong> A custom framebuffer and transition shader handle full-screen blending and era-shift effects. :contentReference[oaicite:6]{index=6}</li>
-                    <li><strong>Particle Systems:</strong> The project includes both falling ash and a mist-wave system used during the transformation. :contentReference[oaicite:7]{index=7}</li>
-                    <li><strong>Procedural Geometry:</strong> Kredik Shaw, walls, park rings, canals, and other scene structures are created from simple primitives and runtime mesh generation. </li>
-                    <li><strong>Dynamic Lighting & Sky Blending:</strong> The project transitions smoothly from Luthadel’s red haze to Elendel’s clear daylight through lighting and skybox interpolation. </li>
-                    <li><strong>Camera Shake:</strong> Sinusoidal camera offsets are used during the collapse phase to create physical weight during destruction. </li>
-                </ul>
-
-                <h2>Material & Atmospheric Work</h2>
+                <h2>Strategies & Architecture</h2>
                 <p>
-                    One of the strongest visual details in the project is the treatment of Kredik Shaw’s stained-glass windows. These use emissive materials combined with colored diffuse maps and low-frequency sine-based modulation to mimic flickering internal firelight. The project also uses alpha-blended ash particles drifting across the scene, fading out during the transition to symbolize the cleansing of the sky as the world changes from Luthadel to Elendel. :contentReference[oaicite:11]{index=11}
+                    The project uses a clean object-oriented strategy model. Baseline and advanced strategies include ALLC, ALLD, TFT, GRIM, PAVLOV, CTFT, PROBER, and random variants. The feedback specifically praised the use of polymorphism through a Strategy interface, cloned instances per seat, smart pointers for resource safety, and a tidy separation between CLI parsing, strategy construction, match logic, statistics, and experiment drivers. :contentReference[oaicite:6]{index=6} :contentReference[oaicite:7]{index=7}
+                </p>
+                <p>
+                    My implementation notes also show the project growing from a small vocabulary of game-domain types into a reusable architecture with per-match reset hooks, seat-aware strategy perspective, Tit-for-Tat support, and round-robin tournament helpers. :contentReference[oaicite:8]{index=8}
                 </p>
 
-                <h2>Performance & Structure</h2>
+                <h2>Experimental Work</h2>
+                <ul class="project-list">
+                    <li><strong>Q1 — Baseline Tournament:</strong> A configurable round-robin across core strategies such as ALLC, ALLD, TFT, GRIM, and PAVLOV, with payoff matrix and leaderboard reporting.</li>
+                    <li><strong>Q2 — Reciprocity Under Noise:</strong> Implementation noise flips moves with probability ε, with sweep experiments across multiple noise levels for TFT, GRIM, PAVLOV, and CTFT.</li>
+                    <li><strong>Q3 — Robustness to Exploiters:</strong> Explicit experiments for PROBER vs ALLC, PROBER vs TFT, and mixed populations including ALLD, both with and without noise.</li>
+                    <li><strong>Q4 — Evolutionary Tournament:</strong> Population updates based on strategy fitness across generations, including mutation and generation-by-generation trajectory output.</li>
+                    <li><strong>Q5 — Strategic Complexity Budget:</strong> Complexity costs are subtracted from raw fitness, enabling direct comparison of evolutionary outcomes with and without SCB.</li>
+                </ul>
+
+                <h2>Technical Focus</h2>
                 <p>
-                    According to the project features sheet, the system was built to run smoothly at roughly 60 FPS in fullscreen while supporting multiple advanced rendering techniques at once. That combination of visual ambition and maintained runtime performance was an important technical goal of the project. :contentReference[oaicite:12]{index=12}
+                    A major strength of the project is that it combines strong software design with actual experimental usability. The CLI is not an afterthought: it is the main interface for reproducing results, rerunning experiments, exporting CSV, and testing different strategic populations. The grading feedback specifically highlighted this unified CLI as one of the strongest parts of the submission. :contentReference[oaicite:9]{index=9}
+                </p>
+                <p>
+                    On the code side, the coursework materials also point to effective use of templates for statistical calculations, operator overloading for result formatting, modern resource management with <code>std::unique_ptr</code>, and a modular separation between engine, parsing, and reporting systems. :contentReference[oaicite:10]{index=10}
                 </p>
 
-                <h2>Controls</h2>
-                <ul class="project-list">
-                    <li><strong>Space:</strong> Begin transition from Luthadel to Elendel</li>
-                    <li><strong>R:</strong> Reset to Luthadel</li>
-                    <li><strong>F:</strong> Toggle free camera</li>
-                    <li><strong>WASD:</strong> Move in free camera</li>
-                    <li><strong>F11:</strong> Toggle fullscreen</li>
-                </ul>
+                <h2>Analytical Findings</h2>
+                <p>
+                    The experiments were used to study when cooperation survives, when strict reciprocity collapses, and how exploitative or noise-tolerant strategies behave under different tournament conditions. In the baseline tournament, reciprocal strategies such as TFT and GRIM were strong in noise-free environments; under noise, more forgiving or repair-oriented strategies such as CTFT and PAVLOV became more resilient. PROBER heavily exploited ALLC but was contained by retaliatory strategies, while the Strategic Complexity Budget shifted evolutionary outcomes toward simpler strategies when complexity costs were applied. :contentReference[oaicite:11]{index=11}
+                </p>
 
                 <h2>Outcome</h2>
                 <p>
-                    This project is one of the clearest examples in my portfolio of combining technical graphics programming with thematic scene direction. It shows how rendering systems, particle effects, timing logic, shader work, and procedural construction can be orchestrated to support not just a pretty scene, but a visual transformation with narrative weight. 
-                </p>
-            </div>
-
-            <div class="card project-showcase-card">
-                <h2>Transition Highlights</h2>
-                <p>
-                    The report’s figure sequence shows the project’s key stages: the initial Luthadel scene under the red sun, the collapse of Kredik Shaw during the transition, the walls crumbling as the mist wave sweeps through, and the final Field of Rebirth layout with circular pathways and memorial statue. The technical detail pages also show stained-glass firelight and the ash-filled sky presentation. :contentReference[oaicite:14]{index=14}
+                    This is one of the strongest technical projects in my portfolio because it demonstrates both software engineering discipline and experimental reasoning. It is not just a simulation that runs — it is a reusable analytical tool with a professional command-line workflow, modular strategy model, reproducible experiment structure, and clear interpretation of results. The final feedback described it as a high-quality, comprehensive implementation that reflects excellent C++ practice and a strong grasp of game-theoretic analysis. :contentReference[oaicite:12]{index=12}
                 </p>
             </div>
         </section>
