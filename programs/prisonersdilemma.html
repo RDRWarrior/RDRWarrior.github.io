@@ -49,7 +49,7 @@
         </section>
 
         <section class="projects section-shell project-page">
-            <img src="../assets/images/nexus.png" class="project-image project-hero-image" alt="Prisoner’s Dilemma simulator image">
+            <img src="../assets/images/prisonersdilemma.png" class="project-image project-hero-image" alt="Prisoner’s Dilemma simulator image">
 
             <div class="card project-meta-card">
                 <div class="project-meta-grid">
@@ -75,12 +75,12 @@
             <div class="card project-content-card">
                 <h2>Overview</h2>
                 <p>
-                    This project is a fully featured Iterated Prisoner’s Dilemma simulator built in C++ for advanced programming coursework. It was designed not just to run basic repeated matches, but to support a complete experimental workflow: configurable tournaments, strategy comparison, implementation noise sweeps, exploiter testing, evolutionary tournaments, and strategic complexity penalties inside fitness calculations. The final submission was assessed as an outstanding, professional-quality implementation that fully satisfied the coursework requirements. :contentReference[oaicite:3]{index=3}
+                    This project is a fully featured Iterated Prisoner’s Dilemma simulator built in C++ for advanced programming coursework. It was designed not just to run basic repeated matches, but to support a complete experimental workflow: configurable tournaments, strategy comparison, implementation noise sweeps, exploiter testing, evolutionary tournaments, and strategic complexity penalties inside fitness calculations. The final submission was assessed as an outstanding, professional-quality implementation that fully satisfied the coursework requirements.
                 </p>
 
                 <h2>My Role</h2>
                 <p>
-                    I designed and implemented the simulator architecture, command-line interface, match engine, strategy system, experiment runners, statistics pipeline, and analysis outputs. I also documented the project’s development process in detailed implementation notes, from defining the minimal domain model and strategy interface through to tournament runners, reactive strategies, noise support, and evolutionary features. :contentReference[oaicite:4]{index=4} :contentReference[oaicite:5]{index=5}
+                    I designed and implemented the simulator architecture, command-line interface, match engine, strategy system, experiment runners, statistics pipeline, and analysis outputs. I also documented the project’s development process in detailed implementation notes, from defining the minimal domain model and strategy interface through to tournament runners, reactive strategies, noise support, and evolutionary features.
                 </p>
 
                 <h2>Core Features</h2>
@@ -94,10 +94,10 @@
 
                 <h2>Strategies & Architecture</h2>
                 <p>
-                    The project uses a clean object-oriented strategy model. Baseline and advanced strategies include ALLC, ALLD, TFT, GRIM, PAVLOV, CTFT, PROBER, and random variants. The feedback specifically praised the use of polymorphism through a Strategy interface, cloned instances per seat, smart pointers for resource safety, and a tidy separation between CLI parsing, strategy construction, match logic, statistics, and experiment drivers. :contentReference[oaicite:6]{index=6} :contentReference[oaicite:7]{index=7}
-                </p>
+                    The project uses a clean object-oriented strategy model. Baseline and advanced strategies include ALLC, ALLD, TFT, GRIM, PAVLOV, CTFT, PROBER, and random variants. The feedback specifically praised the use of polymorphism through a Strategy interface, cloned instances per seat, smart pointers for resource safety, and a tidy separation between CLI parsing, strategy construction, match logic, statistics, and experiment drivers.
+                </p>    
                 <p>
-                    My implementation notes also show the project growing from a small vocabulary of game-domain types into a reusable architecture with per-match reset hooks, seat-aware strategy perspective, Tit-for-Tat support, and round-robin tournament helpers. :contentReference[oaicite:8]{index=8}
+                    My implementation notes also show the project growing from a small vocabulary of game-domain types into a reusable architecture with per-match reset hooks, seat-aware strategy perspective, Tit-for-Tat support, and round-robin tournament helpers.
                 </p>
 
                 <h2>Experimental Work</h2>
@@ -111,20 +111,20 @@
 
                 <h2>Technical Focus</h2>
                 <p>
-                    A major strength of the project is that it combines strong software design with actual experimental usability. The CLI is not an afterthought: it is the main interface for reproducing results, rerunning experiments, exporting CSV, and testing different strategic populations. The grading feedback specifically highlighted this unified CLI as one of the strongest parts of the submission. :contentReference[oaicite:9]{index=9}
+                    A major strength of the project is that it combines strong software design with actual experimental usability. The CLI is not an afterthought: it is the main interface for reproducing results, rerunning experiments, exporting CSV, and testing different strategic populations. The grading feedback specifically highlighted this unified CLI as one of the strongest parts of the submission.
                 </p>
                 <p>
-                    On the code side, the coursework materials also point to effective use of templates for statistical calculations, operator overloading for result formatting, modern resource management with <code>std::unique_ptr</code>, and a modular separation between engine, parsing, and reporting systems. :contentReference[oaicite:10]{index=10}
+                    On the code side, the coursework materials also point to effective use of templates for statistical calculations, operator overloading for result formatting, modern resource management with <code>std::unique_ptr</code>, and a modular separation between engine, parsing, and reporting systems.
                 </p>
 
                 <h2>Analytical Findings</h2>
                 <p>
-                    The experiments were used to study when cooperation survives, when strict reciprocity collapses, and how exploitative or noise-tolerant strategies behave under different tournament conditions. In the baseline tournament, reciprocal strategies such as TFT and GRIM were strong in noise-free environments; under noise, more forgiving or repair-oriented strategies such as CTFT and PAVLOV became more resilient. PROBER heavily exploited ALLC but was contained by retaliatory strategies, while the Strategic Complexity Budget shifted evolutionary outcomes toward simpler strategies when complexity costs were applied. :contentReference[oaicite:11]{index=11}
+                    The experiments were used to study when cooperation survives, when strict reciprocity collapses, and how exploitative or noise-tolerant strategies behave under different tournament conditions. In the baseline tournament, reciprocal strategies such as TFT and GRIM were strong in noise-free environments; under noise, more forgiving or repair-oriented strategies such as CTFT and PAVLOV became more resilient. PROBER heavily exploited ALLC but was contained by retaliatory strategies, while the Strategic Complexity Budget shifted evolutionary outcomes toward simpler strategies when complexity costs were applied.
                 </p>
 
                 <h2>Outcome</h2>
                 <p>
-                    This is one of the strongest technical projects in my portfolio because it demonstrates both software engineering discipline and experimental reasoning. It is not just a simulation that runs — it is a reusable analytical tool with a professional command-line workflow, modular strategy model, reproducible experiment structure, and clear interpretation of results. The final feedback described it as a high-quality, comprehensive implementation that reflects excellent C++ practice and a strong grasp of game-theoretic analysis. :contentReference[oaicite:12]{index=12}
+                    This is one of the strongest technical projects in my portfolio because it demonstrates both software engineering discipline and experimental reasoning. It is not just a simulation that runs — it is a reusable analytical tool with a professional command-line workflow, modular strategy model, reproducible experiment structure, and clear interpretation of results. The final feedback described it as a high-quality, comprehensive implementation that reflects excellent C++ practice and a strong grasp of game-theoretic analysis.
                 </p>
             </div>
         </section>
