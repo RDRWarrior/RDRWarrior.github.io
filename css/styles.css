@@ -162,8 +162,7 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 16px;
     backdrop-filter: blur(14px);
-    position: sticky;
-    top: 14px;
+    position: relative;
     z-index: 10;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
 }
